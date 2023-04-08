@@ -41,6 +41,7 @@ class CustomAuthController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'phone' => 'required',
+            'age' => 'required',
             'password' => 'required|min:6',
         ]);
 
@@ -57,6 +58,7 @@ class CustomAuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
+            'age' => $data['age'],
             'password' => Hash::make($data['password'])
         ]);
     }
