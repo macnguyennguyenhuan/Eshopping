@@ -28,6 +28,7 @@
                 @endguest
             </ul>
         </div>
+
     </div>
 </nav>
 @yield('content')

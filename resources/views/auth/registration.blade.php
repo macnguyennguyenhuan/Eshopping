@@ -30,7 +30,17 @@
                                         <span class="text-danger">{{ $errors->first('phone') }}</span>
                                     @endif
                                 </div>
-
+                                <div class="form-group mb-3">
+                                    <span style="margin-right:10px">Age:</span>
+                                    <select name="age">
+                                        <?php for ($age=1; $age <= 100; $age++): ?>
+                                        <option value="<?=$age;?>"><?=$age;?></option>
+                                        <?php endfor; ?>
+                                        @if ($errors->has('age'))
+                                            <span class="text-danger">{{ $errors->first('age') }}</span>
+                                        @endif
+                                    </select>
+                                </div>
                                 <div class="form-group mb-3">
                                     <input type="password" placeholder="Password" id="password" class="form-control"
                                            name="password" required>

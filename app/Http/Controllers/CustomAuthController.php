@@ -1,10 +1,10 @@
 <?php
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use Hash;
-use Session;
 use App\Models\User;
+use Hash;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 //Unknow
 class CustomAuthController extends Controller
