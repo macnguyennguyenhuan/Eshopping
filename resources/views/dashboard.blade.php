@@ -23,6 +23,12 @@
                     </li>
                 @else
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('detail') }}">Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('users') }}">All User</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('signout') }}">Logout</a>
                     </li>
                 @endguest

@@ -2,9 +2,12 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Hash;
+use http\Params;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Session;
+
 
 //Unknow
 class CustomAuthController extends Controller
@@ -34,7 +37,17 @@ class CustomAuthController extends Controller
     {
         return view('auth.registration');
     }
+    public function detail(Request $request, $id){
+        $request->route('id');
+        $id = $this->route('id');
+        $users = DB::select('SELECT * FROM users Where id = $id');
+        return view('auth.detail',['users' => $users]);
 
+    }
+    public function allUsers(){
+        $users = DB::select('SELECT id,name,Age FROM users');
+        return view('auth.users',['users' => $users]);
+    }
     public function customRegistration(Request $request)
     {
         $request->validate([

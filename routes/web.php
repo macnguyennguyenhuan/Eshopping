@@ -14,11 +14,12 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('users', [CustomAuthController::class, 'allUsers'])->name('users');
+Route::get('detail', [CustomAuthController::class, 'detail'])->name('detail');
 
 Route::get('user/profile',function(){
     return redirect()->route('profile');
 })->name('profile');
-
 Route::get('/',function(){
     return view('welcome');
 });
