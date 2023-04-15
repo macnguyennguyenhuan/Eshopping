@@ -23,10 +23,10 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('detail') }}">Information</a>
+                        <a class="nav-link" href="{{ route('users') }}">All User</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('users') }}">All User</a>
+                        <a class="nav-link" href="{{route('detail')}}">{{ Auth::user()->name }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('signout') }}">Logout</a>
@@ -37,6 +37,7 @@
 
     </div>
 </nav>
+
 @yield('content')
 </body>
 </html>

@@ -5,7 +5,7 @@ use Hash;
 use http\Params;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB; /* Sử dụng Facades để làm việc với database */
 use Session;
 
 
@@ -37,13 +37,10 @@ class CustomAuthController extends Controller
     {
         return view('auth.registration');
     }
-    public function detail(Request $request, $id){
-        $request->route('id');
-        $id = $this->route('id');
-        $users = DB::select('SELECT * FROM users Where id = $id');
-        return view('auth.detail',['users' => $users]);
-
+    public function detail(){
+        return view('auth.detail');
     }
+    /* Duyệt dữ liệu từ database */
     public function allUsers(){
         $users = DB::select('SELECT id,name,Age FROM users');
         return view('auth.users',['users' => $users]);

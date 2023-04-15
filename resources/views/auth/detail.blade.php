@@ -4,14 +4,33 @@
     <title>Custom Auth in Laravel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        table, th, td {
-            border:1px solid black;
-        }
-        th{
+
+        .container{
             text-align: center;
+            justify-content: center;
         }
-        td{
-            padding: 10px;
+        h1{
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        .detail li {
+            list-style-type: none;
+            font-size: 1.25em;
+            margin-bottom: 10px;
+        }
+        .img{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #4a5568;
+            margin-bottom: 20px;
+        }
+        .detail li:nth-child(2){
+            font-size: 2em;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -34,36 +53,34 @@
                     </li>
                 @else
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('users') }}">All User</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('signout') }}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Back</a>
                     </li>
                 @endguest
             </ul>
         </div>
+
     </div>
 </nav>
 <div class="container">
-    <table style="border: solid 1px #000">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Date Create</th>
-            <th>Phone</th>
-            <th>Age</th>
-        </tr>
-        @foreach($users as $p)
-            <tr>
-                <td>{{$p->id}}</td>
-                <td>{{$p->name}}</td>
-                <td>{{$p->email}}</td>
-                <td>{{$p->created_at}}</td>
-                <td>{{$p->phone}}</td>
-                <td>{{$p->Age}}</td>
-            </tr>
-        @endforeach
-    </table>
+    @if(Auth::check())
+        <h1>THÔNG TIN USERS</h1>
+        <ul class="detail">
+            <li><div class="img"></div></li>
+            <li>{{Auth::user()->name}}</li>
+            <li>Email: {{Auth::user()->email}}</li>
+            <li>Ngày Tạo: {{Auth::user()->created_at}}</li>
+            <li>Số Điện Thoại: {{Auth::user()->phone}}</li>
+            <li>Tuổi: {{Auth::user()->Age}}</li>
+        </ul>
+    @else
+    @endif
 </div>
-
 @yield('content')
 </body>
 </html>
