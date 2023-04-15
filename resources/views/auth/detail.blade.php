@@ -59,7 +59,7 @@
                         <a class="nav-link" href="{{ route('signout') }}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Back</a>
+                        <a class="nav-link" href="{{url('dashboard')}}">Dashboard</a>
                     </li>
                 @endguest
             </ul>
