@@ -17,4 +17,32 @@ class UserControler extends Controller
         $users = DB::select('SELECT id,name, email, created_at,phone,Age FROM users');
         return view('user.allUsers',['users' => $users]);
     }
+//    public function showPageGuest()
+//
+//    {
+//
+//        if (!$this->userCan('view-guest')) {
+//
+//            abort('403', __('Bạn không có quyền thực hiện thao tác này'));
+//
+//        }
+//
+//        return view("auth.guest");
+//
+//    }
+//
+//
+//    public function showPageAdmin()
+//
+//    {
+//
+//        if (!$this->userCan('view-users')) {
+//
+//            abort('403', __('Bạn không có quyền thực hiện thao tác này'));
+//
+//        }
+//
+//        return view("auth.users");
+//
+//    }
 }

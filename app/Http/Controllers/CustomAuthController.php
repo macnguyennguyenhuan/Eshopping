@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Hash;
 use http\Params;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB; /* Sử dụng Facades để làm việc với database */
@@ -32,7 +33,10 @@ class CustomAuthController extends Controller
 
         return redirect("login")->withSuccess('Login details are not valid');
     }
-
+//    public function userCan($action, $option = NULL){
+//        $user = Auth::user();
+//        return Gate::forUser($user)->allows($action,$option);
+//    }
     public function registration()
     {
         return view('auth.registration');

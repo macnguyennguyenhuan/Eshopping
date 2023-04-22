@@ -17,6 +17,10 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 Route::get('users', [CustomAuthController::class, 'allUsers'])->name('users');
 Route::get('detail', [CustomAuthController::class, 'detail'])->name('detail');
 
+Route::get('/welcome', 'Controller@showPageGuest');
+
+Route::get('/admin', 'Controller@showPageAdmin');
+
 Route::get('user/profile',function(){
     return redirect()->route('profile');
 })->name('profile');
