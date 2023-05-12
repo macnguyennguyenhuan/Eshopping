@@ -15,7 +15,7 @@ class CustomAuthController extends Controller
 {
     public function index()
     {
-        return view('auth.login');
+        return view('admin.login');
     }
 
     public function customLogin(Request $request)
@@ -39,15 +39,15 @@ class CustomAuthController extends Controller
 //    }
     public function registration()
     {
-        return view('auth.registration');
+        return view('admin.registration');
     }
     public function detail(){
-        return view('auth.detail');
+        return view('admin.detail');
     }
     /* Duyệt dữ liệu từ database */
     public function allUsers(){
         $users = DB::select('SELECT id,name,Age FROM users');
-        return view('auth.users',['users' => $users]);
+        return view('admin.users',['users' => $users]);
     }
     public function customRegistration(Request $request)
     {

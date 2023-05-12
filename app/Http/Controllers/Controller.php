@@ -27,7 +27,7 @@ class UserControler extends Controller
 //
 //        }
 //
-//        return view("auth.guest");
+//        return view("admin.guest");
 //
 //    }
 //
@@ -42,7 +42,7 @@ class UserControler extends Controller
 //
 //        }
 //
-//        return view("auth.users");
+//        return view("admin.users");
 //
 //    }
 }

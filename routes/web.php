@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CustomAuthController;
+use config\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -8,30 +8,20 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 */
-Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
-Route::get('login', [CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
-Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
-Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
-Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
-Route::get('users', [CustomAuthController::class, 'allUsers'])->name('users');
-Route::get('detail', [CustomAuthController::class, 'detail'])->name('detail');
+//Front End
+Route::get('/', [HomeController::class,'index']);
+Route::get('/trang-chu',[HomeController::class,'index']);
 
-Route::get('/welcome', 'Controller@showPageGuest');
+//Back End (Admin)
+Route::get('/admin',[\App\Http\Controllers\AdminController::class,'index']);
+Route::get('/dashboard',[\App\Http\Controllers\AdminController::class,'showDashboard']);
+Route::get('/logout',[\App\Http\Controllers\AdminController::class,'logout']);
+Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'dashboard']);
 
-Route::get('/admin', 'Controller@showPageAdmin');
+//Category Product
+Route::get('/manufacture',[\App\Http\Controllers\CategoryProduct::class,'manufacture']);
+Route::get('/add-product',[\App\Http\Controllers\CategoryProduct::class,'add_product']);
+Route::get('/all-products',[\App\Http\Controllers\CategoryProduct::class,'all_products']);
 
-Route::get('user/profile',function(){
-    return redirect()->route('profile');
-})->name('profile');
-Route::get('/',function(){
-    return view('welcome');
-});
-Route::get('/hello-world', function (){
-    return view('hello-world');
-});
-
-Route::get('hoten/{ten}',function ($ten){
-    return 'hello '.$ten;
-});
-
+//User Management
+Route::get('/users',[\App\Http\Controllers\UserManagement::class,'users']);
