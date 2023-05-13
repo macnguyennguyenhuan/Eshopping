@@ -14,7 +14,7 @@ class AdminController extends Controller
         return view('admin_login');
     }
     public function showDashboard(){
-        return view('admin.dashboard');
+        return view('admin.index');
     }
     public function dashboard(Request $request){
         $admin_email = $request->admin_email;
