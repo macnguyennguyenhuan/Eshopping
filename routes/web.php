@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 //Front End
-Route::get('/', [HomeController::class,'index']);
-Route::get('/trang-chu',[HomeController::class,'index']);
+Route::get('/', [HomeController::class,'layout']);
+Route::get('/trang-chu',[HomeController::class,'layout']);
 
 //Back End (Admin)
 Route::get('/admin',[\App\Http\Controllers\AdminController::class,'index']);
@@ -24,4 +24,10 @@ Route::get('/add-product',[\App\Http\Controllers\CategoryProduct::class,'add_pro
 Route::get('/all-products',[\App\Http\Controllers\CategoryProduct::class,'all_products']);
 
 //User Management
-Route::get('/users',[\App\Http\Controllers\UserManagement::class,'users']);
+Route::get('/all-users',[\App\Http\Controllers\AuthController::class,'all_users']);
+Route::get('/add-user',[\App\Http\Controllers\AuthController::class,'add_user']);
+Route::get('/register-auth',[\App\Http\Controllers\AuthController::class,'register_auth']);
+Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_auth']);
+Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
+Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
+

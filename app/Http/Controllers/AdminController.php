@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
@@ -13,7 +14,16 @@ class AdminController extends Controller
     public function index(){
         return view('admin_login');
     }
+    public function AuthLogin(){
+        $admin_id = Auth::id();
+        if($admin_id){
+            return Redirect::to('dashboard');
+        }else{
+            return Redirect::to('admin')->send();
+        }
+    }
     public function showDashboard(){
+        $this->AuthLogin();
         return view('admin.dashboard');
     }
     public function dashboard(Request $request){

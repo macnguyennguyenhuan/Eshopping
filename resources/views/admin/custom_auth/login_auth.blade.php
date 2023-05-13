@@ -27,26 +27,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="{{asset('backend/js/jquery2.0.3.min.js')}}"></script>
 </head>
 <body>
-<div class="log-w3">
+<div class="log-w3" style="height: 600px" >
     <div class="w3layouts-main">
-        <h2>Đăng Nhập</h2>
+        <h2>Đăng Nhập Authentication</h2>
         <?php
-            $message = \Illuminate\Support\Facades\Session::get('message');
+        $message = \Illuminate\Support\Facades\Session::get('message');
         if($message){
             echo '<span class="text-alert">',$message,'</span>';
             \Illuminate\Support\Facades\Session::put('message',null);
         }
         ?>
-        <form action="{{URL::to('/admin-dashboard')}}" method="post">
+        <form action="{{URL::to('/login')}}" method="post" >
             {{ csrf_field() }}
             <input type="text" class="ggg" name="admin_email" placeholder="Điền Email" required="">
-            <input type="password" class="ggg" name="admin_password" placeholder="Điền Password" required="">
+            <input type="password" class="ggg" name="admin_password" placeholder="Điền Password" required=""
             <span><input type="checkbox" />Ghi Nhớ</span>
-            <h6><a href="#">Quên Mật Khẩu?</a></h6>
             <div class="clearfix"></div>
-            <input type="submit" value="Đăng Nhập" name="login">
+            <input type="submit" value="Đăng Ký" name="login">
         </form>
-        <p>Chưa có tài khoản?<a href="{{URL::to('/register-auth')}}">Tạo Tài Khoản</a></p>
         <a href="{{URL::to('/register-auth')}}">Đăng Ký Auth</a>
         <a href="{{URL::to('/login-auth')}}">Đăng Nhập Auth</a>
     </div>
