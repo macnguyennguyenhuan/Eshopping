@@ -5,25 +5,32 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
+
 <head>
-    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <title>Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+    </script>
     <!-- bootstrap-css -->
-    <link rel="stylesheet" href="{{asset('backend/css/bootstrap.min.css')}}" >
+    <link rel="stylesheet" href="{{asset('backend/css/bootstrap.min.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
     <link href="{{asset('backend/css/style.css')}}" rel='stylesheet' type='text/css' />
-    <link href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet"/>
+    <link href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet" />
     <!-- font CSS -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link
+        href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
     <!-- font-awesome icons -->
-    <link rel="stylesheet" href="{{asset('backend/css/font.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('backend/css/font.css')}}" type="text/css" />
     <link href="{{asset('backend/css/font-awesome.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('backend/css/morris.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{asset('backend/css/morris.css')}}" type="text/css" />
     <!-- calendar -->
     <link rel="stylesheet" href="{{asset('backend/css/monthly.css')}}">
     <!-- //calendar -->
@@ -31,114 +38,122 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="{{asset('backend/js/jquery2.0.3.min.js')}}"></script>
     <script src="{{asset('backend/js/raphael-min.js')}}"></script>
     <script src="{{asset('backend/js/morris.js')}}"></script>
+    <script src="https://kit.fontawesome.com/750526b3dd.js" crossorigin="anonymous"></script>
 </head>
-<body>
-<section id="container">
-    <!--header start-->
-    <header class="header fixed-top clearfix">
-        <!--logo start-->
-        <div class="brand">
-            <a href="{{URL::to('/trang-chu')}}" class="logo">
-                E-Shopping
-            </a>
-            <div class="sidebar-toggle-box">
-                <div class="fa fa-bars"></div>
-            </div>
-        </div>
-        <!--logo end-->
 
-        <div class="top-nav clearfix">
-            <!--search & user info start-->
-            <ul class="nav pull-right top-menu">
-                <li>
-                    <input type="text" class="form-control search" placeholder=" Search">
-                </li>
-                <!-- user login dropdown start-->
-                <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="{{asset('backend/images/2.png')}}">
-                        <span class="username">
-                             <?php
+<body>
+    <section id="container">
+        <!--header start-->
+        <header class="header fixed-top clearfix">
+            <!--logo start-->
+            <div class="brand">
+                <a href="{{URL::to('/trang-chu')}}" class="logo">
+                    E-Shopping
+                </a>
+                <div class="sidebar-toggle-box">
+                    <div class="fa fa-bars"></div>
+                </div>
+            </div>
+            <!--logo end-->
+
+            <div class="top-nav clearfix">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+                    <li>
+                        <input type="text" class="form-control search" placeholder=" Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="{{asset('backend/images/2.png')}}">
+                            <span class="username">
+                                <?php
                              $name = \Illuminate\Support\Facades\Session::get('admin_name');
                              if($name){
                                  echo $name;
                              }
                              ?>
 
-                        </span>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu extended logout">
-                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                        <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
-                    </ul>
-                </li>
-                <!-- user login dropdown end -->
-
-            </ul>
-            <!--search & user info end-->
-        </div>
-    </header>
-    <!--header end-->
-
-    <!--sidebar start-->
-    <aside>
-        <div id="sidebar" class="nav-collapse">
-            <!-- sidebar menu start-->
-            <div class="leftside-navigation">
-                <ul class="sidebar-menu" id="nav-accordion">
-                    <li>
-                        <a class="active" href="{{URL::to('/trang-chu')}}">
-                            <i class="fa fa-home"></i>
-                            <span>Trang Chủ</span>
+                            </span>
+                            <b class="caret"></b>
                         </a>
-                    </li>
-
-                    <li>
-                        <a class="active" href="{{URL::to('/users')}}">
-                            <i class="fa fa-user"></i>
-                            <span>Quản Lý Người Dùng</span>
-                        </a>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-glass"></i>
-                            <span>Danh Mục Sản Phẩm</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/manufacture')}}">Hãng Sản Xuất</a></li>
-                            <li><a href="{{URL::to('/add-product')}}">Thêm Sản Phẩm</a></li>
-                            <li><a href="{{URL::to('/all-products')}}">Quản Lý Sản Phẩm</a></li>
+                        <ul class="dropdown-menu extended logout">
+                            <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="{{URL::to('/admin')}}">
-                            <i class="fa fa-user"></i>
-                            <span>Trang Đăng Nhập</span>
-                        </a>
-                    </li>
-                </ul>            </div>
-            <!-- sidebar menu end-->
-        </div>
-    </aside>
-    <!--sidebar end-->
-<section id="main-content">
-    <section class="wrapper">
-        @yield('admin_content')
+                    <!-- user login dropdown end -->
+
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+        <!--header end-->
+
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <!-- sidebar menu start-->
+                <div class="leftside-navigation">
+                    <ul class="sidebar-menu" id="nav-accordion">
+                        <li>
+                            <a class="active" href="{{URL::to('/trang-chu')}}">
+                                <i class="fa fa-home"></i>
+                                <span>Trang Chủ</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="active" href="{{URL::to('/users')}}">
+                                <i class="fa fa-user"></i>
+                                <span>Quản Lý Người Dùng</span>
+                            </a>
+                        </li>
+
+                        <li >
+                            <a href="{{ url('admin/product') }}">
+                                <i class="fa fa-glass"></i>
+                                <span>Sản Phẩm</span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="{{ url('admin/manufacturer') }}">
+                                <i class="fa fa-user"></i>
+                                <span>Hãng Sản Xuất</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{URL::to('/admin')}}">
+                                <i class="fa fa-user"></i>
+                                <span>Trang Đăng Nhập</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <section id="main-content">
+            <section class="wrapper">
+                @yield('admin_content')
+            </section>
+        </section>
     </section>
-</section>
-</section>
-<script src="{{asset('backend/js/bootstrap.js')}}"></script>
-<script src="{{asset('backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
-<script src="{{asset('backend/js/scripts.js')}}"></script>
-<script src="{{asset('backend/js/jquery.slimscroll.js')}}"></script>
-<script src="{{asset('backend/js/jquery.nicescroll.js')}}"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="{{asset('backend/js/jquery.scrollTo.js')}}"></script>
-<!-- morris JavaScript -->
-<script>
-    $(document).ready(function() {
+    <script src="{{asset('backend/js/bootstrap.js')}}"></script>
+    <script src="{{asset('backend/js/jquery.dcjqaccordion.2.7.js')}}"></script>
+    <script src="{{asset('backend/js/scripts.js')}}"></script>
+    <script src="{{asset('backend/js/jquery.slimscroll.js')}}"></script>
+    <script src="{{asset('backend/js/jquery.nicescroll.js')}}"></script>
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+    <script src="{{asset('backend/js/jquery.scrollTo.js')}}"></script>
+    <!-- morris JavaScript -->
+    <script>
+        $(document).ready(function() {
         //BOX BUTTON SHOW AND CLOSE
         jQuery('.small-graph-box').hover(function() {
             jQuery(this).find('.box-button').fadeIn('fast');
@@ -191,11 +206,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     });
-</script>
-<!-- calendar -->
-<script type="text/javascript" src="{{asset('js/monthly.js')}}"></script>
-<script type="text/javascript">
-    $(window).load( function() {
+    </script>
+    <!-- calendar -->
+    <script type="text/javascript" src="{{asset('js/monthly.js')}}"></script>
+    <script type="text/javascript">
+        $(window).load( function() {
 
         $('#mycalendar').monthly({
             mode: 'event',
@@ -222,7 +237,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
 
     });
-</script>
-<!-- //calendar -->
+    </script>
+    <!-- //calendar -->
 </body>
+
 </html>
