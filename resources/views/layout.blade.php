@@ -14,6 +14,9 @@
     <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
+    
+    {{-- Font awesome --}}
+    <script src="https://kit.fontawesome.com/750526b3dd.js" crossorigin="anonymous"></script>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
