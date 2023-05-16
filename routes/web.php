@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 //Front End
-Route::get('/', [HomeController::class,'layout']);
-Route::get('/trang-chu',[HomeController::class,'layout']);
+Route::get('/', [HomeController::class,'index']);
+Route::get('/trang-chu',[HomeController::class,'index']);
 
 //Back End (Admin)
 Route::get('/admin',[\App\Http\Controllers\AdminController::class,'index']);

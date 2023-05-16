@@ -100,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <span>Quản Lý Người Dùng</span>
                         </a>
                         <ul class="sub">
-                            <li><a href="{{URL::to('/add-user')}}">Thêm Sản Phẩm</a></li>
+                            <li><a href="{{URL::to('/add-user')}}">Liệt </a></li>
                             <li><a href="{{URL::to('/all-users')}}">Quản Lý Sản Phẩm</a></li>
                         </ul>
                     </li>
