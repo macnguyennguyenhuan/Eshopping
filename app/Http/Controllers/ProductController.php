@@ -92,4 +92,11 @@ class ProductController extends Controller
         Product::destroy($id);
         return redirect('admin/product')->with('message', 'Xóa sản phẩm thành công!');
     }
+
+    public function timKiemSP()
+    {
+        $keyword = $_GET['keyword'];
+        $data = Product::where('name', 'LIKE', '%' . $keyword . '%')->get();
+        return view('pages.timKiem')->with('data', $data);
+    }
 }

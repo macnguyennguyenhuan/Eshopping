@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Home | E-Shopping</title>
 
     <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -113,7 +113,9 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="search_box pull-right">
-                        <input type="text" placeholder="Tìm sản phẩm"/>
+                        <form action="{{ url('tim-kiem') }}" method="get">
+                            <input type="text" name="keyword" placeholder="Tìm sản phẩm"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -272,7 +274,7 @@
                     </div><!--/price-range-->
 
                     <div class="shipping text-center"><!--shipping-->
-                        <img src="{{('frontend/images/home/shipping.jpg')}}" alt="" />
+                        <img src="{{('frontend/images/home/shipping.jpg')}}" alt=""/>
                     </div><!--/shipping-->
 
                 </div>

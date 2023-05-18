@@ -28,10 +28,16 @@ Route::resource('admin/product',ProductController::class);
 Route::resource('/admin/manufacturer', ManufacturerController::class);
 
 //User Management
+
+Route::get('/users',[\App\Http\Controllers\UserManagement::class,'users']);
+
+Route::get('tim-kiem', [ProductController::class, 'timKiemSP']);
+
 Route::get('/all-users',[\App\Http\Controllers\AuthController::class,'all_users']);
 Route::get('/add-user',[\App\Http\Controllers\AuthController::class,'add_user']);
 Route::get('/register-auth',[\App\Http\Controllers\AuthController::class,'register_auth']);
 Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_auth']);
 Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
+
 
