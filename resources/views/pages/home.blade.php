@@ -63,7 +63,7 @@
                                     style="width: 200px; height:200px" /></a>
                             <h2>{{ $item->price }} VND</h2>
                             <h3>{{ $item->name }}</h3>
-                            <div class="d-flex">
+                            <div class="d-flex" style="margin-bottom: 5px">
                                 <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add to cart">
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </a>

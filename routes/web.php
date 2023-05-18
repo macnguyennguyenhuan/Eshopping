@@ -29,3 +29,5 @@ Route::resource('/admin/manufacturer', ManufacturerController::class);
 
 //User Management
 Route::get('/users',[\App\Http\Controllers\UserManagement::class,'users']);
+
+Route::get('tim-kiem', [ProductController::class, 'timKiemSP']);
