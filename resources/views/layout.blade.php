@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="{{URL::to('/trang-chu')}}"><img src="{{('frontend/images/home/logo.png')}}" alt="" /></a>
+                        <a href="{{URL::to('/trang-chu')}}"><img src="{{asset('frontend/images/home/logo.png')}}" alt="" /></a>
                     </div>
                     <div class="btn-group pull-right">
                         <div class="btn-group">
@@ -73,7 +73,7 @@
                             <li><a href="#"><i class="fa fa-user"></i>Tài Khoản</a></li>
                             <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Thanh Toán</a></li>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ Hàng</a></li>
-                            <li><a href="login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
+                            <li><a href="/login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -197,54 +197,14 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
                                         Hãng
+                                        
                                     </a>
                                 </h4>
                             </div>
-                            <div id="sportswear" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Apple</a></li>
-                                        <li><a href="#">Samsung</a></li>
-                                        <li><a href="#">Oppo</a></li>
-                                        <li><a href="#">Huawei</a></li>
-                                        <li><a href="#">Nokia</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                         </div>
-
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Điện Thoại</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Máy Tính Bảng</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Laptop</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Máy Tính Bàn</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Phụ Kiện</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Hàng Cũ</a></h4>
-                            </div>
-                        </div>
+                        
 
                     </div><!--/category-products-->
 

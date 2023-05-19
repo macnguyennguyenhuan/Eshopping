@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,10 +25,10 @@ Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'da
 //Product
 Route::resource('admin/product',ProductController::class);
 
-Route::get('product',function(){
-    return view('cart.checkoutproducts');    
-});
+
 Route::get('detail/{id}',[ProductController::class,'show'])->name('detail.id');
+Route::get('order/{id}',[OrderController::class,'index'])->name('order.id');
+Route::get('order/store/{id}',[OrderController::class,'store']);
 Route::post('detail/store',[CommentController::class,'store']);
 //Manufacturer
 Route::resource('/admin/manufacturer', ManufacturerController::class);
