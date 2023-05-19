@@ -33,16 +33,20 @@
                         <th>Tên Người Dùng</th>
                         <th>Email</th>
                         <th>Số Điện Thoại</th>
+                        <th>Mật Khẩu</th>
                         <th style="width:30px;"></th>
                     </tr>
                     </thead>
                     <tbody>
+
                     <tr>
+
                         <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-                        <td>1</td>
-                        <td><span class="text-ellipsis">Admin</span></td>
-                        <td><span class="text-ellipsis">admin@gmail.com</span></td>
-                        <td><span class="text-ellipsis">123456</span></td>
+                        <td></td>
+                        <td><span class="text-ellipsis"></span></td>
+                        <td><span class="text-ellipsis"></span></td>
+                        <td><span class="text-ellipsis"></span></td>
+                        <td><span class="text-ellipsis"></span></td>
                         <td>
                             <a href="" class="active" ui-toggle-class=""><i class="fa fa-pencil text-success text-active"></i><i class="fa fa-times text-danger text"></i></a>
                         </td>

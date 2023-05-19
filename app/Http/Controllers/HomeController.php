@@ -1,10 +1,9 @@
 <?php
 
-namespace config;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Product;
 use App\Models\Manufacturer;
+use App\Models\Product;
 use App\Slider;
 
 class HomeController extends Controller

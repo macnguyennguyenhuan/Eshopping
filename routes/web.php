@@ -1,9 +1,9 @@
 <?php
 
-use config\HomeController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +16,9 @@ Route::get('/trang-chu',[HomeController::class,'index']);
 
 //Back End (Admin)
 Route::get('/login',[\App\Http\Controllers\AdminController::class,'index']);
-Route::post('/admin',[\App\Http\Controllers\AdminController::class,'show_dashboard']);
+Route::get('/admin',[\App\Http\Controllers\AdminController::class,'show_dashboard']);
 Route::get('/logout',[\App\Http\Controllers\AdminController::class,'logout']);
+Route::get('/all-users',[\App\Http\Controllers\AdminController::class,'allUsers']);
 Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'dashboard']);
 
 //Product
