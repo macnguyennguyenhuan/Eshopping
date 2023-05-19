@@ -23,12 +23,8 @@ class AdminController extends Controller
         }
     }
     public function showDashboard(){
-<<<<<<< HEAD
         $this->AuthLogin();
         return view('admin.dashboard');
-=======
-        return view('admin.index');
->>>>>>> 2b9dddd3983c2be54a85837d6bb4eefd3fcef56c
     }
     public function dashboard(Request $request){
         $admin_email = $request->admin_email;
