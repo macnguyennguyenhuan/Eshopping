@@ -26,11 +26,11 @@
                 @endif
                 <div class="card">
                     <div class="card-header px-0 py-3">
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <h2>Hãng Sản Xuất</h2>
                         </div>
-                        <div class="col-sm-2">
-                            <a href="{{ route('manufacturer.create') }}" class="btn btn-success mt-1">Thêm Hãng</a>
+                        <div class="col-sm-3">
+                            <a href="{{ route('manufacturer.create') }}" style="margin-left: 4em" class="btn btn-success">Thêm Hãng Sản Xuất</a>
                         </div>
                     </div>
 
