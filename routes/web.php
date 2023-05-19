@@ -16,7 +16,7 @@ Route::get('/trang-chu',[HomeController::class,'index']);
 
 //Back End (Admin)
 Route::get('/login',[\App\Http\Controllers\AdminController::class,'index']);
-Route::post('/admin',[\App\Http\Controllers\AdminController::class,'showDashboard']);
+Route::post('/admin',[\App\Http\Controllers\AdminController::class,'show_dashboard']);
 Route::get('/logout',[\App\Http\Controllers\AdminController::class,'logout']);
 Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'dashboard']);
 
@@ -40,4 +40,10 @@ Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_aut
 Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
 
-
+//Banner
+Route::get('/manage-slider',[\App\Http\Controllers\SliderController::class,'manage_slider']);
+Route::get('/add-slider',[\App\Http\Controllers\SliderController::class,'add_slider']);
+Route::post('/insert-slider',[\App\Http\Controllers\SliderController::class,'insert_slider']);
+Route::get('/delete-slide/{slide_id}',[\App\Http\Controllers\SliderController::class,'delete_slide']);
+Route::get('/unactive-slide/{slide_id}',[\App\Http\Controllers\SliderController::class,'unactive_slide']);
+Route::get('/active-slide/{slide_id}',[\App\Http\Controllers\SliderController::class,'active_slide']);

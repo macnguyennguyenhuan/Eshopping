@@ -31,16 +31,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="w3layouts-main">
         <h2>Đăng Nhập</h2>
         <?php
-            $message = \Illuminate\Support\Facades\Session::get('message');
+        $message = Session::get('message');
         if($message){
-            echo '<span class="text-alert">',$message,'</span>';
-            \Illuminate\Support\Facades\Session::put('message',null);
+            echo '<span class="text-alert">'.$message.'</span>';
+            Session::put('message',null);
         }
         ?>
         <form action="{{URL::to('/admin')}}" method="post">
             {{ csrf_field() }}
+            @foreach($errors->all() as $val)
+                <ul>
+                    <li>{{$val}}</li>
+                </ul>
+            @endforeach
             <input type="text" class="ggg" name="admin_email" placeholder="Điền Email" required="">
-            <input type="password" class="ggg" name="admin_password" placeholder="Điền Password" required="">
+            <input type="password" class="ggg" name="admin_password" placeholder="Điền Password">
             <span><input type="checkbox" />Ghi Nhớ</span>
             <h6><a href="#">Quên Mật Khẩu?</a></h6>
             <div class="clearfix"></div>

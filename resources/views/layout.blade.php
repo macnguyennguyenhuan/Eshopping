@@ -14,7 +14,7 @@
     <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
-    
+
     {{-- Font awesome --}}
     <script src="https://kit.fontawesome.com/750526b3dd.js" crossorigin="anonymous"></script>
     <!--[if lt IE 9]>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="{{URL::to('/trang-chu')}}"><img src="{{('frontend/images/home/logo.png')}}" alt="" /></a>
+                        <a href="{{URL::to('/trang-chu')}}"><span style="color: #1a202c; font-size: 3rem">E-SHOPPING</span></a>
                     </div>
                     <div class="btn-group pull-right">
                         <div class="btn-group">
@@ -133,45 +133,27 @@
                         <li data-target="#slider-carousel" data-slide-to="1"></li>
                         <li data-target="#slider-carousel" data-slide-to="2"></li>
                     </ol>
-
+                    <style type="text/css">
+                        img.img.img-responsive.img-slider {
+                            height: 350px;
+                        }
+                    </style>
                     <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPING</h1>
-                                <h2>Tên Sản Phẩm</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Mua Ngay</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="{{('frontend/images/home/girl1.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{('frontend/images/home/pricing.png')}}"  class="pricing" alt="" />
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>100% Responsive Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Mua Ngay</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="{{('frontend/images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{('frontend/images/home/pricing.png')}}"  class="pricing" alt="" />
-                            </div>
-                        </div>
+                        @php
+                            $i = 0;
+                        @endphp
+                        @foreach($slider as $key => $slide)
+                            @php
+                                $i++;
+                            @endphp
+                            <div class="item {{$i==1 ? 'active' : '' }}">
 
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>E</span>-SHOPPER</h1>
-                                <h2>Free Ecommerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Mua Ngay</button>
+                                <div class="col-sm-12">
+                                    <img alt="{{$slide->slider_desc}}" src="{{asset('public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive img-slider">
+                                </div>
                             </div>
-                            <div class="col-sm-6">
-                                <img src="{{('frontend/images/home/girl3.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{('frontend/images/home/pricing.png')}}" class="pricing" alt="" />
-                            </div>
-                        </div>
+                        @endforeach
+
 
                     </div>
 
@@ -187,7 +169,6 @@
         </div>
     </div>
 </section><!--/slider-->
-
 <section>
     <div class="container">
         <div class="row">
@@ -294,59 +275,58 @@
             <div class="row">
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Service</h2>
+                        <h2>Tổng đài hỗ trợ miễn phí</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Online Help</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Order Status</a></li>
-                            <li><a href="#">Change Location</a></li>
-                            <li><a href="#">FAQ’s</a></li>
+                            <li><a href="#">Gọi mua hàng 1800.2097 (7h30 - 22h00)</a></li>
+                            <li><a href="#">Gọi khiếu nại 1800.2063 (8h00 - 21h30)</a></li>
+                            <li><a href="#">Gọi bảo hành 1800.2064 (8h00 - 21h00)</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Quock Shop</h2>
+                        <h2>Thông tin</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">T-Shirt</a></li>
-                            <li><a href="#">Mens</a></li>
-                            <li><a href="#">Womens</a></li>
-                            <li><a href="#">Gift Cards</a></li>
-                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Mua hàng và thanh toán Online</a></li>
+                            <li><a href="#">Mua hàng trả góp Online</a></li>
+                            <li><a href="#">Tra thông tin đơn hàng</a></li>
+                            <li><a href="#">Tra điểm Smember</a></li>
+                            <li><a href="#">Xem ưu đãi Smember</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>Policies</h2>
+                        <h2>Chính Sách</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privecy Policy</a></li>
-                            <li><a href="#">Refund Policy</a></li>
-                            <li><a href="#">Billing System</a></li>
-                            <li><a href="#">Ticket System</a></li>
+                            <li><a href="#">Tra thông tin bảo hành</a></li>
+                            <li><a href="#">Tra cứu hoá đơn điện tử</a></li>
+                            <li><a href="#">Thông tin hoá đơn mua hàng</a></li>
+                            <li><a href="#">Trung tâm bảo hành chính hãng</a></li>
+                            <li><a href="#">Quy định về việc sao lưu dữ liệu</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2>Dịch vụ và thông tin khác</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Company Information</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Store Location</a></li>
-                            <li><a href="#">Affillate Program</a></li>
-                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
+                            <li><a href="#">Ưu đãi thanh toán</a></li>
+                            <li><a href="#">Quy chế hoạt động</a></li>
+                            <li><a href="#">Chính sách Bảo hành</a></li>
+                            <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>About Shopper</h2>
+                        <h2>Muốn được tư vấn, hãy để lại mail</h2>
                         <form action="#" class="searchform">
-                            <input type="text" placeholder="Your email address" />
+                            <input type="text" placeholder="Email" />
                             <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                            <p>Get the most recent updates from <br />our site and be updated your self...</p>
                         </form>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript">
-        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
     </script>
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="{{asset('backend/css/bootstrap.min.css')}}">
@@ -42,6 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
+
     <section id="container">
         <!--header start-->
         <header class="header fixed-top clearfix">
@@ -65,51 +66,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <img alt="" src="{{asset('backend/images/2.png')}}">
+                            <img alt="" src="{{('backend/images/2.png')}}">
                             <span class="username">
-                                <?php
-                             $name = \Illuminate\Support\Facades\Session::get('admin_name');
-                             if($name){
-                                 echo $name;
-                             }
-                             ?>
+                	<?php
+                    $name = Session::get('admin_name');
+                    if($name){
+                        echo $name;
 
-                            </span>
+                    }
+                    ?>
+
+                </span>
                             <b class="caret"></b>
                         </a>
-<<<<<<< HEAD
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-user"></i>
-                            <span>Quản Lý Người Dùng</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/add-user')}}">Liệt </a></li>
-                            <li><a href="{{URL::to('/all-users')}}">Quản Lý Sản Phẩm</a></li>
-                        </ul>
-                    </li>
-                    <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-glass"></i>
-                            <span>Danh Mục Sản Phẩm</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/manufacture')}}">Hãng Sản Xuất</a></li>
-                            <li><a href="{{URL::to('/add-product')}}">Thêm Sản Phẩm</a></li>
-                            <li><a href="{{URL::to('/all-products')}}">Quản Lý Sản Phẩm</a></li>
-=======
                         <ul class="dropdown-menu extended logout">
                             <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                             <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                            <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
->>>>>>> 2b9dddd3983c2be54a85837d6bb4eefd3fcef56c
+                            <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i>Đăng xuất</a></li>
                         </ul>
                     </li>
                     <!-- user login dropdown end -->
 
                 </ul>
-                <!--search & user info end-->
             </div>
         </header>
         <!--header end-->
@@ -127,14 +105,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </a>
                         </li>
 
-                        <li>
-                            <a class="active" href="{{URL::to('/users')}}">
+                        <li class="sub-menu">
+                            <a href="javascript:;">
                                 <i class="fa fa-user"></i>
                                 <span>Quản Lý Người Dùng</span>
                             </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/add-user')}}"> Thêm quyền người dùng </a></li>
+                                <li><a href="{{URL::to('/all-users')}}">Danh Sách Người Dùng</a></li>
+                            </ul>
                         </li>
 
-                        <li >
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-sliders"></i>
+                                <span>Banner</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{URL::to('/manage-slider')}}">Quản Lý Slider</a></li>
+                                <li><a href="{{URL::to('/add-slider')}}">Thêm Slider</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
                             <a href="{{ url('admin/product') }}">
                                 <i class="fa fa-glass"></i>
                                 <span>Sản Phẩm</span>
@@ -150,9 +144,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
 
                         <li>
-                            <a href="{{URL::to('/admin')}}">
+                            <a href="{{URL::to('/login')}}">
                                 <i class="fa fa-user"></i>
-                                <span>Trang Đăng Nhập</span>
+                                <span>Đăng Xuất</span>
                             </a>
                         </li>
                     </ul>
@@ -172,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="{{asset('backend/js/scripts.js')}}"></script>
     <script src="{{asset('backend/js/jquery.slimscroll.js')}}"></script>
     <script src="{{asset('backend/js/jquery.nicescroll.js')}}"></script>
-    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="{{asset('backend/js/flot-chart/excanvas.min.js')}}"></script><![endif]-->
     <script src="{{asset('backend/js/jquery.scrollTo.js')}}"></script>
     <!-- morris JavaScript -->
     <script>
@@ -231,7 +225,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
     </script>
     <!-- calendar -->
-    <script type="text/javascript" src="{{asset('js/monthly.js')}}"></script>
+    <script type="text/javascript" src="{{asset('backend/js/monthly.js')}}"></script>
     <script type="text/javascript">
         $(window).load( function() {
 

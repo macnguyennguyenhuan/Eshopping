@@ -22,14 +22,10 @@ class AdminController extends Controller
             return Redirect::to('admin')->send();
         }
     }
-    public function showDashboard(){
-<<<<<<< HEAD
+    public function show_dashboard(){
         $this->AuthLogin();
         return view('admin.dashboard');
-=======
-        return view('admin.index');
->>>>>>> 2b9dddd3983c2be54a85837d6bb4eefd3fcef56c
-    }
+        }
     public function dashboard(Request $request){
         $admin_email = $request->admin_email;
         $admin_password = md5($request->admin_password);
