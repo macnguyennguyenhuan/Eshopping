@@ -24,7 +24,7 @@ class User extends Authenticatable
         'phone',
         'image',
         'role',
-        'address',
+       
     ];
     /**
      * The attributes that should be hidden for serialization.
