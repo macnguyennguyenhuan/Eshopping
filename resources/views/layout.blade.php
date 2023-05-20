@@ -8,15 +8,7 @@
     <meta name="author" content="">
     <title>Home | E-Shopping</title>
 
-<<<<<<< HEAD
-    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
-    <link href="{{asset('frontend/css/main.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
-=======
+
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/prettyPhoto.css') }}" rel="stylesheet">
@@ -24,7 +16,6 @@
     <link href="{{ asset('frontend/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/responsive.css') }}" rel="stylesheet">
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
 
     {{-- Font awesome --}}
     <script src="https://kit.fontawesome.com/750526b3dd.js" crossorigin="anonymous"></script>
@@ -49,56 +40,8 @@
         <div class="header_top">
             <!--header_top-->
             <div class="container">
-
-<<<<<<< HEAD
         </div>
     </div><!--/header_top-->
-
-    <div class="header-middle"><!--header-middle-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="logo pull-left">
-                        <a href="{{URL::to('/trang-chu')}}"><span style="color: #1a202c; font-size: 3rem">E-SHOPPING</span></a>
-                    </div>
-                    <div class="btn-group pull-right">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                VN
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Chinese</a></li>
-                                <li><a href="#">USA</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                VND
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Bad People</a></li>
-                                <li><a href="#">USD</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-user"></i>Tài Khoản</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Thanh Toán</a></li>
-                            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ Hàng</a></li>
-                            <li><a href="login.html"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
-                        </ul>
-                    </div>
-                </div>
-=======
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
-            </div>
-        </div>
         <!--/header_top-->
 
         <div class="header-middle">
@@ -107,8 +50,8 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="{{ URL::to('/trang-chu') }}"><img src="{{ 'frontend/images/home/logo.png' }}"
-                                    alt="" /></a>
+                            <a href="{{URL::to('/trang-chu')}}"><span style="color: #1a202c; font-size: 3rem">E-SHOPPING</span></a>
+                            </a>
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -135,14 +78,7 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                </div>
-                <div class="col-sm-3">
-                    <div class="search_box pull-right">
-                        <form action="{{ url('tim-kiem') }}" method="get">
-                            <input type="text" name="keyword" placeholder="Tìm sản phẩm"/>
-                        </form>
-=======
+
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
@@ -167,132 +103,55 @@
                                 @endif
                             </ul>
                         </div>
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
                     </div>
                 </div>
             </div>
         </div>
         <!--/header-middle-->
-
-<<<<<<< HEAD
-<section id="slider"><!--slider-->
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#slider-carousel" data-slide-to="1"></li>
-                        <li data-target="#slider-carousel" data-slide-to="2"></li>
-                    </ol>
-                    <style type="text/css">
-                        img.img.img-responsive.img-slider {
-                            height: 350px;
-                        }
-                    </style>
-                    <div class="carousel-inner">
-                        @php
-                            $i = 0;
-                        @endphp
-                        @foreach($slider as $key => $slide)
-                            @php
-                                $i++;
-                            @endphp
-                            <div class="item {{$i==1 ? 'active' : '' }}">
-
-                                <div class="col-sm-12">
-                                    <img alt="{{$slide->slider_desc}}" src="{{asset('public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive img-slider">
-                                </div>
+            <div class="header-bottom"><!--header-bottom-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
                             </div>
-                        @endforeach
-
-
-                    </div>
-
-                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section><!--/slider-->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="left-sidebar">
-                    <h2>Danh Mục</h2>
-                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Hãng
-                                    </a>
-                                </h4>
+                            <div class="mainmenu pull-left">
+                                <ul class="nav navbar-nav collapse navbar-collapse">
+                                    <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang Chủ</a></li>
+                                    <li class="dropdown"><a href="#">Cửa Hàng<i class="fa fa-angle-down"></i></a>
+                                        <ul role="menu" class="sub-menu">
+                                            <li><a href="#">Điện Thoại</a></li>
+                                            <li><a href="#">Máy Tính</a></li>
+                                            <li><a href="#">Máy Tính Bảng</a></li>
+                                            <li><a href="#">Laptop</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Khuyến Mãi</a>
+                                    </li>
+                                    <li><a href="#">Hàng Cũ</a></li>
+                                    <li><a href="#">Liên Hệ</a></li>
+                                </ul>
                             </div>
-                            <div id="sportswear" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Apple</a></li>
-                                        <li><a href="#">Samsung</a></li>
-                                        <li><a href="#">Oppo</a></li>
-                                        <li><a href="#">Huawei</a></li>
-                                        <li><a href="#">Nokia</a></li>
-=======
-        <div class="header-bottom">
-            <!--header-bottom-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
                         </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="{{ URL::to('/trang-chu') }}" class="active">Trang Chủ</a></li>
-                                <li class="dropdown"><a href="#">Cửa Hàng<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="#">Điện Thoại</a></li>
-                                        <li><a href="#">Máy Tính</a></li>
-                                        <li><a href="#">Máy Tính Bảng</a></li>
-                                        <li><a href="#">Laptop</a></li>
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
-                                    </ul>
-                                </li>
-                                <li><a href="#">Khuyến Mãi</a>
-                                </li>
-                                <li><a href="#">Hàng Cũ</a></li>
-                                <li><a href="#">Liên Hệ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="search_box pull-right">
-                            <input type="text" placeholder="Tìm sản phẩm" />
+                        <div class="col-sm-3">
+                            <div class="search_box pull-right">
+                                <form action="{{ url('tim-kiem') }}" method="get">
+                                    <input type="text" name="keyword" placeholder="Tìm sản phẩm"/>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!--/header-bottom-->
+            </div><!--/header-bottom-->
     </header>
     <!--/header-->
 
-    <section id="slider">
-        <!--slider-->
+    <section id="slider"><!--slider-->
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -302,54 +161,27 @@
                             <li data-target="#slider-carousel" data-slide-to="1"></li>
                             <li data-target="#slider-carousel" data-slide-to="2"></li>
                         </ol>
-
+                        <style type="text/css">
+                            img.img.img-responsive.img-slider {
+                                height: 350px;
+                            }
+                        </style>
                         <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPING</h1>
-                                    <h2>Tên Sản Phẩm</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Mua Ngay</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{ 'frontend/images/home/girl1.jpg' }}" class="girl img-responsive"
-                                        alt="" />
-                                    <img src="{{ 'frontend/images/home/pricing.png' }}" class="pricing"
-                                        alt="" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>100% Responsive Design</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Mua Ngay</button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="{{ 'frontend/images/home/girl2.jpg' }}" class="girl img-responsive"
-                                        alt="" />
-                                    <img src="{{ 'frontend/images/home/pricing.png' }}" class="pricing"
-                                        alt="" />
-                                </div>
-                            </div>
+                            @php
+                                $i = 0;
+                            @endphp
+                            @foreach($slider as $key => $slide)
+                                @php
+                                    $i++;
+                                @endphp
+                                <div class="item {{$i==1 ? 'active' : '' }}">
 
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1><span>E</span>-SHOPPER</h1>
-                                    <h2>Free Ecommerce Template</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-                                    <button type="button" class="btn btn-default get">Mua Ngay</button>
+                                    <div class="col-sm-12">
+                                        <img alt="{{$slide->slider_desc}}" src="{{asset('public/uploads/slider/'.$slide->slider_image)}}" height="200" width="100%" class="img img-responsive img-slider">
+                                    </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <img src="{{ 'frontend/images/home/girl3.jpg' }}" class="girl img-responsive"
-                                        alt="" />
-                                    <img src="{{ 'frontend/images/home/pricing.png' }}" class="pricing"
-                                        alt="" />
-                                </div>
-                            </div>
+                            @endforeach
+
 
                         </div>
 
@@ -364,17 +196,14 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!--/slider-->
-
+    </section><!--/slider-->
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
                         <h2>Danh Mục</h2>
-                        <div class="panel-group category-products" id="accordian">
-                            <!--category-productsr-->
+                        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
@@ -428,11 +257,9 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <!--/category-products-->
+                        </div><!--/category-products-->
 
-                        <div class="brands_products">
-                            <!--brands_products-->
+                        <div class="brands_products"><!--brands_products-->
                             <h2>Brands</h2>
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
@@ -445,26 +272,19 @@
                                     <li><a href="#"> <span class="pull-right">(4)</span>ACER</a></li>
                                 </ul>
                             </div>
-                        </div>
-                        <!--/brands_products-->
+                        </div><!--/brands_products-->
 
-                        <div class="price-range">
-                            <!--price-range-->
+                        <div class="price-range"><!--price-range-->
                             <h2>Price Range</h2>
                             <div class="well text-center">
-                                <input type="text" class="span2" value="" data-slider-min="0"
-                                    data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]"
-                                    id="sl2"><br />
+                                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
                                 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
                             </div>
-                        </div>
-                        <!--/price-range-->
+                        </div><!--/price-range-->
 
-                        <div class="shipping text-center">
-                            <!--shipping-->
-                            <img src="{{ 'frontend/images/home/shipping.jpg' }}" alt="" />
-                        </div>
-                        <!--/shipping-->
+                        <div class="shipping text-center"><!--shipping-->
+                            <img src="{{('frontend/images/home/shipping.jpg')}}" alt=""/>
+                        </div><!--/shipping-->
 
                     </div>
                 </div>
@@ -476,161 +296,83 @@
         </div>
     </section>
 
-    <footer id="footer">
-        <!--Footer-->
+    <footer id="footer"><!--Footer-->
 
         <div class="footer-widget">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>Service</h2>
+                            <h2>Tổng đài hỗ trợ miễn phí</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Online Help</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Order Status</a></li>
-                                <li><a href="#">Change Location</a></li>
-                                <li><a href="#">FAQ’s</a></li>
+                                <li><a href="#">Gọi mua hàng 1800.2097 (7h30 - 22h00)</a></li>
+                                <li><a href="#">Gọi khiếu nại 1800.2063 (8h00 - 21h30)</a></li>
+                                <li><a href="#">Gọi bảo hành 1800.2064 (8h00 - 21h00)</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>Quock Shop</h2>
+                            <h2>Thông tin</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">T-Shirt</a></li>
-                                <li><a href="#">Mens</a></li>
-                                <li><a href="#">Womens</a></li>
-                                <li><a href="#">Gift Cards</a></li>
-                                <li><a href="#">Shoes</a></li>
-                            </ul>
-                        </div>
-<<<<<<< HEAD
-                    </div><!--/price-range-->
-
-                    <div class="shipping text-center"><!--shipping-->
-                        <img src="{{('frontend/images/home/shipping.jpg')}}" alt=""/>
-                    </div><!--/shipping-->
-=======
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Policies</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privecy Policy</a></li>
-                                <li><a href="#">Refund Policy</a></li>
-                                <li><a href="#">Billing System</a></li>
-                                <li><a href="#">Ticket System</a></li>
+                                <li><a href="#">Mua hàng và thanh toán Online</a></li>
+                                <li><a href="#">Mua hàng trả góp Online</a></li>
+                                <li><a href="#">Tra thông tin đơn hàng</a></li>
+                                <li><a href="#">Tra điểm Smember</a></li>
+                                <li><a href="#">Xem ưu đãi Smember</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="single-widget">
-                            <h2>About Shopper</h2>
+                            <h2>Chính Sách</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Company Information</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Store Location</a></li>
-                                <li><a href="#">Affillate Program</a></li>
-                                <li><a href="#">Copyright</a></li>
+                                <li><a href="#">Tra thông tin bảo hành</a></li>
+                                <li><a href="#">Tra cứu hoá đơn điện tử</a></li>
+                                <li><a href="#">Thông tin hoá đơn mua hàng</a></li>
+                                <li><a href="#">Trung tâm bảo hành chính hãng</a></li>
+                                <li><a href="#">Quy định về việc sao lưu dữ liệu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Dịch vụ và thông tin khác</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
+                                <li><a href="#">Ưu đãi thanh toán</a></li>
+                                <li><a href="#">Quy chế hoạt động</a></li>
+                                <li><a href="#">Chính sách Bảo hành</a></li>
+                                <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
+                                <li><a href="#">Tuyển dụng</a></li>
+                                <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-3 col-sm-offset-1">
                         <div class="single-widget">
-                            <h2>About Shopper</h2>
+                            <h2>Muốn được tư vấn, hãy để lại mail</h2>
                             <form action="#" class="searchform">
-                                <input type="text" placeholder="Your email address" />
-                                <button type="submit" class="btn btn-default"><i
-                                        class="fa fa-arrow-circle-o-right"></i></button>
-                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                                <input type="text" placeholder="Email" />
+                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
                             </form>
                         </div>
                     </div>
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
 
                 </div>
             </div>
         </div>
 
-<<<<<<< HEAD
-<footer id="footer"><!--Footer-->
-
-    <div class="footer-widget">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="single-widget">
-                        <h2>Tổng đài hỗ trợ miễn phí</h2>
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Gọi mua hàng 1800.2097 (7h30 - 22h00)</a></li>
-                            <li><a href="#">Gọi khiếu nại 1800.2063 (8h00 - 21h30)</a></li>
-                            <li><a href="#">Gọi bảo hành 1800.2064 (8h00 - 21h00)</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="single-widget">
-                        <h2>Thông tin</h2>
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Mua hàng và thanh toán Online</a></li>
-                            <li><a href="#">Mua hàng trả góp Online</a></li>
-                            <li><a href="#">Tra thông tin đơn hàng</a></li>
-                            <li><a href="#">Tra điểm Smember</a></li>
-                            <li><a href="#">Xem ưu đãi Smember</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="single-widget">
-                        <h2>Chính Sách</h2>
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Tra thông tin bảo hành</a></li>
-                            <li><a href="#">Tra cứu hoá đơn điện tử</a></li>
-                            <li><a href="#">Thông tin hoá đơn mua hàng</a></li>
-                            <li><a href="#">Trung tâm bảo hành chính hãng</a></li>
-                            <li><a href="#">Quy định về việc sao lưu dữ liệu</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="single-widget">
-                        <h2>Dịch vụ và thông tin khác</h2>
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Khách hàng doanh nghiệp (B2B)</a></li>
-                            <li><a href="#">Ưu đãi thanh toán</a></li>
-                            <li><a href="#">Quy chế hoạt động</a></li>
-                            <li><a href="#">Chính sách Bảo hành</a></li>
-                            <li><a href="#">Liên hệ hợp tác kinh doanh</a></li>
-                            <li><a href="#">Tuyển dụng</a></li>
-                            <li><a href="#">Dịch vụ bảo hành điện thoại</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-sm-offset-1">
-                    <div class="single-widget">
-                        <h2>Muốn được tư vấn, hãy để lại mail</h2>
-                        <form action="#" class="searchform">
-                            <input type="text" placeholder="Email" />
-                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                        </form>
-                    </div>
-                </div>
-
-=======
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
                     <p class="pull-left">TDC - 2023</p>
                     <p class="pull-right"><span>Nhóm E</span></p>
                 </div>
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
             </div>
         </div>
 
-    </footer>
-    <!--/Footer-->
+    </footer><!--/Footer-->
 
 
 

@@ -112,11 +112,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </a>
                             <ul class="sub">
                                 <li><a href="{{URL::to('/add-user')}}"> Thêm quyền người dùng </a></li>
-<<<<<<< HEAD
-                                <li><a href="{{URL::to('/all-users')}}">Danh Sách Người Dùng</a></li>
-=======
-                                <li><a href="{{URL::to('/users')}}">Danh Sách Người Dùng</a></li>
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
                             </ul>
                         </li>
 
