@@ -8,6 +8,7 @@
     <div class="row">
         @foreach ($allProduct as $item)
         @if ($item->name == "Iphone 13")
+        
         <div class="col-sm-3">
             <div class="product-image-wrapper">
                 <div class="single-products">
@@ -48,6 +49,7 @@
             @foreach ($allManu as $item)
             <li><a href="#{{ $item->name }}" data-toggle="tab">{{ $item->name }}</a></li>
             @endforeach
+   
         </ul>
     </div>
 
@@ -55,16 +57,19 @@
         {{-- All Product --}}
         <div class="tab-pane fade active in" id="all">
             @foreach ($allProduct as $item)
+            <?php
+            $path = 'order/store/'.$item->id;
+        ?>
             <div class="col-sm-3">
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
                             <a href="#"><img src="{{ $item->image }}" alt="Product"
                                     style="width: 200px; height:200px" /></a>
-                            <h2>{{ $item->price }} VND</h2>
+                            <h2><a href="{{route('detail.id',['id'=>$item->id])}}">{{ $item->price }} VND</a></h2>
                             <h3>{{ $item->name }}</h3>
                             <div class="d-flex">
-                                <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add to cart">
+                                <a href="<?=$path?>" class="btn btn-success" data-toggle="tooltip" title="Add to cart">
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </a>
 
@@ -93,7 +98,7 @@
                             <div class="productinfo text-center">
                                 <a href="#"><img src="{{ $product->image }}" alt="Product"
                                         style="width: 200px; height:200px" /></a>
-                                <h2>{{ $product->price }} VND</h2>
+                                <h2><a href="{{route('detail.id',['id'=>$product->id])}}">{{ $product->price }} VND</a></h2>
                                 <h3>{{ $product->name }}</h3>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add to cart">

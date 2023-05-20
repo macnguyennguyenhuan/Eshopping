@@ -77,9 +77,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </span>
                             <b class="caret"></b>
                         </a>
-<<<<<<< HEAD
+
                     </li>
-                    <li class="sub-menu">
+                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-user"></i>
                             <span>Quản Lý Người Dùng</span>
@@ -88,8 +88,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="{{URL::to('/add-user')}}">Liệt </a></li>
                             <li><a href="{{URL::to('/all-users')}}">Quản Lý Sản Phẩm</a></li>
                         </ul>
-                    </li>
-                    <li class="sub-menu">
+                    </li> 
+                    < <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-glass"></i>
                             <span>Danh Mục Sản Phẩm</span>
@@ -98,12 +98,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="{{URL::to('/manufacture')}}">Hãng Sản Xuất</a></li>
                             <li><a href="{{URL::to('/add-product')}}">Thêm Sản Phẩm</a></li>
                             <li><a href="{{URL::to('/all-products')}}">Quản Lý Sản Phẩm</a></li>
-=======
+
                         <ul class="dropdown-menu extended logout">
                             <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                             <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                             <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
->>>>>>> 2b9dddd3983c2be54a85837d6bb4eefd3fcef56c
                         </ul>
                     </li>
                     <!-- user login dropdown end -->
