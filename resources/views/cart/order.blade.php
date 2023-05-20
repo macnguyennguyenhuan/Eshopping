@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-
 	<section id="cart_items">
 		<div class="container">
 			<div class="breadcrumbs">
@@ -25,13 +24,10 @@
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">Hình ảnh</td>
 							<td class="description">Tên sản phẩm</td>
-							<td class="description">Số lượng tồn</td>
+							<td class="description">Số lượng</td>
 							<td class="price">Giá sản phẩm</td>
-							<td class="quantity">Số lượng</td>
 							<td class="total">Thành tiền</td>
-							<td></td>
 						</tr>
 					</thead>
 					<tbody>
@@ -136,13 +132,18 @@
 						</td>
 						</tr>
 						@else 
+						@foreach($order as $value)
 						<tr>
-							<td colspan="5"><center>
-							@php 
-							echo 'Làm ơn thêm sản phẩm vào giỏ hàng';
-							@endphp
-							</center></td>
+							@foreach($product as $value2)
+							@if($value2->id == $value->product_id)
+							<td>{{$value2->name}}</td>
+							@endif
+							@endforeach
+							<td>{{$value->qty}}</td>
+							<td>{{$value->price}}</td>
+							<td>{{$value->total}}</td>
 						</tr>
+						@endforeach
 						@endif
 					</tbody>
 

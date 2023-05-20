@@ -44,6 +44,7 @@
     </div><!--/header_top-->
         <!--/header_top-->
 
+<<<<<<< HEAD
         <div class="header-middle">
             <!--header-middle-->
             <div class="container">
@@ -52,6 +53,25 @@
                         <div class="logo pull-left">
                             <a href="{{URL::to('/trang-chu')}}"><span style="color: #1a202c; font-size: 3rem">E-SHOPPING</span></a>
                             </a>
+=======
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="{{URL::to('/trang-chu')}}"><img src="{{asset('frontend/images/home/logo.png')}}" alt="" /></a>
+                    </div>
+                    <div class="btn-group pull-right">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                VN
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Chinese</a></li>
+                                <li><a href="#">USA</a></li>
+                            </ul>
+>>>>>>> f6fceb9901588dca9c0ea207569a72755d7328c1
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
@@ -83,6 +103,7 @@
                             <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Thanh Toán</a></li>
                             <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ Hàng</a></li>
                             <li><a href="login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
+                            <li><a href="/login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
                         </ul>
                     </div>
                 </div>
@@ -127,6 +148,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
@@ -149,6 +171,54 @@
                                     <li><a href="{{ url('cus_login') }}"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
                                     <li><a href="{{ url('cus_register') }}"><i class="fa fa-lock"></i>Đăng Ký</a></li>
                                 @endif
+=======
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="left-sidebar">
+                    <h2>Danh Mục</h2>
+                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+                                        Hãng
+                                        
+                                    </a>
+                                </h4>
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div><!--/category-products-->
+
+                    <div class="brands_products"><!--brands_products-->
+                        <h2>Brands</h2>
+                        <div class="brands-name">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#"> <span class="pull-right">(50)</span>Apple</a></li>
+                                <li><a href="#"> <span class="pull-right">(56)</span>Samsung</a></li>
+                                <li><a href="#"> <span class="pull-right">(27)</span>Oppo</a></li>
+                                <li><a href="#"> <span class="pull-right">(32)</span>Nokia</a></li>
+                                <li><a href="#"> <span class="pull-right">(5)</span>MSI</a></li>
+                                <li><a href="#"> <span class="pull-right">(9)</span>ASUS</a></li>
+                                <li><a href="#"> <span class="pull-right">(4)</span>ACER</a></li>
+>>>>>>> f6fceb9901588dca9c0ea207569a72755d7328c1
                             </ul>
                         </div>
                     </div>
