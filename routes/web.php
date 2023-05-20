@@ -3,11 +3,9 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Route;
-=======
 use App\Http\Controllers\user\UserController;
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +43,6 @@ Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_aut
 Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
 
-<<<<<<< HEAD
 //Banner
 Route::get('/manage-slider',[\App\Http\Controllers\SliderController::class,'manage_slider']);
 Route::get('/add-slider',[\App\Http\Controllers\SliderController::class,'add_slider']);
@@ -53,7 +50,7 @@ Route::post('/insert-slider',[\App\Http\Controllers\SliderController::class,'ins
 Route::get('/delete-slide/{slide_id}',[\App\Http\Controllers\SliderController::class,'delete_slide']);
 Route::get('/unactive-slide/{slide_id}',[\App\Http\Controllers\SliderController::class,'unactive_slide']);
 Route::get('/active-slide/{slide_id}',[\App\Http\Controllers\SliderController::class,'active_slide']);
-=======
+
 //customer
 Route::get('/cus_login',[UserController::class,'loginUser'])->name('loginUser');
 Route::post('/loginAuth',[UserController::class,'userLogin'])->name('userLogin');
@@ -70,4 +67,3 @@ Route::get('/search',[UserController::class,'search'])->name('search');
 Route::get('/fix_user{user}',[UserController::class,'fix'])->name('fix');
 Route::put('/fix_user/{user}',[UserController::class,'update'])->name('update');
 
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
