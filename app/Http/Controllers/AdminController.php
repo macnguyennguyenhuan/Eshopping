@@ -23,18 +23,13 @@ class AdminController extends Controller
             return Redirect::to('admin');
         }
     }
-<<<<<<< HEAD
+
     public function show_dashboard(){
 
         $this->AuthLogin();
         return view('admin.dashboard');
         }
-=======
-    public function showDashboard(){
-        $this->AuthLogin();
-        return view('admin.dashboard');
-    }
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
+
     public function dashboard(Request $request){
         $request->validate([
             'admin_email' => 'required',
