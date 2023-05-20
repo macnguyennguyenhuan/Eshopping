@@ -7,7 +7,6 @@
         </div>
         <div class="row w3-res-tb">
             <div class="col-sm-5 m-b-xs">
-
             </div>
             <div class="col-sm-4">
             </div>

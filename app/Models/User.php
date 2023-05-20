@@ -20,11 +20,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'phone',
-        'age',
         'password',
+        'phone',
+        'image',
+        'role',
+        'address',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -34,7 +35,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
     /**
      * The attributes that should be cast.
      *
@@ -43,7 +43,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function getId(){
-        return $this->id;
-    }
+
 }

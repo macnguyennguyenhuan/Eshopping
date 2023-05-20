@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin | Manufacturer</title>
-    <style>
-        th, td, tr{
-            color: #000 !important;
-        }
-    </style>
-</head>
 
 <body>
     @include('admin_layout')
