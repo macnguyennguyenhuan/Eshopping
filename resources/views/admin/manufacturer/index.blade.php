@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin | Manufacturer</title>
     <style>
-        th, td, tr{
-            color: #000 !important;
+        table tr, th, td{
+            color: #000 !important
         }
     </style>
 </head>
-
 <body>
     @include('admin_layout')
     <section id="main-content">
@@ -26,14 +24,15 @@
                 @endif
                 <div class="card">
                     <div class="card-header px-0 py-3">
-                        <div class="col-sm-10">
+                        <div class="col-sm-9">
                             <h2>Hãng Sản Xuất</h2>
                         </div>
-                        <div class="col-sm-2">
-                            <a href="{{ route('manufacturer.create') }}" class="btn btn-success mt-1">Thêm Hãng</a>
+                        <div class="col-sm-3">
+                            <a href="{{ route('manufacturer.create') }}" style="margin-left: 4em"
+                                class="btn btn-success">Thêm Hãng Sản Xuất</a>
                         </div>
                     </div>
-
+    
                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
@@ -54,25 +53,25 @@
                                         <div class="d-flex text-center">
                                             <a href="{{ url('admin/manufacturer/' . $manu->id . '/edit') }}"
                                                 class="btn btn-warning">Sửa</a>
-                                            <form action="{{ url('admin/manufacturer/' . $manu->id) }}" method="post" class="ms-2">
+                                            <form action="{{ url('admin/manufacturer/' . $manu->id) }}" method="post"
+                                                class="ms-2">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger">Xóa</button>
                                             </form>
                                         </div>
-                        
+    
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
-
+    
                 </div>
             </div>
             @yield('admin_content')
         </section>
     </section>
 </body>
-
 </html>

@@ -11,7 +11,6 @@ class AuthController extends Controller
     public function register_auth(){
         return view('admin.custom_auth.register');
     }
-
     public function login_auth(){
         return view('admin.custom_auth.login_auth');
     }
@@ -39,7 +38,6 @@ class AuthController extends Controller
         $admin-> admin_password = md5($data['admin_password']);
         $admin->save();
         return \redirect('/register-auth')->with('messsage','Đăng Ký thành Công');
-
     }
     public function validation($request){
         return $this->validate($request,[
