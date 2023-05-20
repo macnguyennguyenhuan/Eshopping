@@ -29,6 +29,9 @@ class AdminController extends Controller
         $this->AuthLogin();
         return view('admin.dashboard');
         }
+    public function dashboard(Request $request){
+        $admin_email = $request->admin_email;
+        $admin_password = md5($request->admin_password);
 
     public function dashboard(Request $request){
         $request->validate([

@@ -48,6 +48,7 @@
             @foreach ($allManu as $item)
             <li><a href="#{{ $item->name }}" data-toggle="tab">{{ $item->name }}</a></li>
             @endforeach
+   
         </ul>
     </div>
 

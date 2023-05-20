@@ -63,6 +63,54 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Chinese</a></li>
                                     <li><a href="#">USA</a></li>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+                                VND
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Bad People</a></li>
+                                <li><a href="#">USD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-user"></i>Tài Khoản</a></li>
+                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Thanh Toán</a></li>
+                            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ Hàng</a></li>
+                            <li><a href="login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="{{URL::to('/trang-chu')}}" class="active">Trang Chủ</a></li>
+                            <li class="dropdown"><a href="#">Cửa Hàng<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="#">Điện Thoại</a></li>
+                                    <li><a href="#">Máy Tính</a></li>
+                                    <li><a href="#">Máy Tính Bảng</a></li>
+                                    <li><a href="#">Laptop</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group">
