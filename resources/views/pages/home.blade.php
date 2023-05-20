@@ -14,8 +14,8 @@
                     <div class="productinfo text-center">
                         <a href="#"><img src="{{ $item->image }}" alt="Product"
                                 style="width: 200px; height:200px" /></a>
-                        <h2>{{ $item->price }} VND</h2>
-                        <h3>{{ $item->name }}</h3>
+                        <h3 class="text-danger">{{ $item->price }} VND</h3>
+                        <h4>{{ $item->name }}</h4>
                         <div class="d-flex">
                             <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add to cart">
                                 <i class="fa-solid fa-cart-plus"></i>
@@ -61,8 +61,8 @@
                         <div class="productinfo text-center">
                             <a href="#"><img src="{{ $item->image }}" alt="Product"
                                     style="width: 200px; height:200px" /></a>
-                            <h2>{{ $item->price }} VND</h2>
-                            <h3>{{ $item->name }}</h3>
+                            <h3>{{ $item->price }} VND</h3>
+                            <h4>{{ $item->name }}</h4>
                             <div class="d-flex" style="margin-bottom: 5px">
                                 <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add to cart">
                                     <i class="fa-solid fa-cart-plus"></i>
@@ -93,8 +93,8 @@
                             <div class="productinfo text-center">
                                 <a href="#"><img src="{{ $product->image }}" alt="Product"
                                         style="width: 200px; height:200px" /></a>
-                                <h2>{{ $product->price }} VND</h2>
-                                <h3>{{ $product->name }}</h3>
+                                <h3>{{ $product->price }} VND</h3>
+                                <h4>{{ $product->name }}</h4>
                                 <div class="d-flex">
                                     <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add to cart">
                                         <i class="fa-solid fa-cart-plus"></i>

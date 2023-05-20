@@ -18,16 +18,7 @@
                     <form action="{{ url('admin/manufacturer/' . $manu->id) }}" method="post">
                         {!!csrf_field()!!}
                         @method('PATCH')
-                        <select name="manufacturer" id="manufacturer" class="form-select">
-                            @foreach ( $allManu as $item)
-                            @if( $item->name == $manu->name )
-                            <option value="{{ $manu->name }}" selected>{{
-                                $manu->name }}</option>
-                            @else
-                            <option value="{{ $item->name }}">{{ $item->name }}</option>
-                            @endif
-                            @endforeach
-                        </select>
+                        <input type="text" class="form-control" name="name" id="name" value="{{ $manu->name }}">
                         <button type="submit" class="btn btn-warning mt-3">Sửa</button>
                     </form>
                 </div>

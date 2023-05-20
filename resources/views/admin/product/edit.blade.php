@@ -28,7 +28,7 @@
                                 <input type="text" class="form-control" name="name" value="{{ $product->name }}">
 
                                 <label for="name" class="mt-2">Price:</label>
-                                <input type="text" class="form-control" name="price" value="{{ $product->name }}">
+                                <input type="text" class="form-control" name="price" value="{{ $product->price }}">
 
                                 <label for="name" class="mt-2">Description:</label>
                                 <textarea class="form-control" rows="5" id="description" name="description">
