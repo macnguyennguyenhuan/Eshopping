@@ -20,12 +20,12 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed',
-            'phone' => 'required',
-            'role' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required|max:255',
+            'email' => 'required|max:255|email|unique:users',
+            'password' => 'required|min:6|max:255|confirmed',
+            'phone' => 'required|max:255|',
+            'role' => 'required|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:255',
         ]);
         //move image   
         $image = $request->file('image');
@@ -55,7 +55,7 @@ class UserController extends Controller
         $userId = session('user')->id;
         $user = User::find($userId);
         if (!Hash::check($request->old_password, $user->password)) {
-            return back()->with("error", "Mật khẩu cũ không đúng");
+            return back()->with("error", "Mật khẩu cũ không đúng"); 
         }
         $user->password = Hash::make($request->new_password);
         $user->save();
@@ -112,14 +112,13 @@ class UserController extends Controller
     public function search()
     {
         $search = $_GET['query'];
-
-        $user = User::where('name', 'like', '%' . $search . '%')
-            ->orWhere('email', 'like', '%' . $search . '%')
-            ->orWhere('id', 'like', '%' . $search . '%')
+        $user = User::where('name', 'like', $search)
+            ->orWhere('email', 'like', $search)
+            ->orWhere('id', 'like', $search)
             ->get();
         $message = '';
         if ($user->isEmpty()) {
-            $message = 'Không tìm thấy kết quả phù hợp.';
+            $message = 'Không tìm thấy User';
         }
         return view('customer.search', compact('user', 'message'));
     }
@@ -130,30 +129,13 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'phone' => 'required',
-            'role' => 'required',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users,email,' . $user->id,
+            'phone' => 'required|max:255',
+            'role' => 'required|max:255',
         ]);
-
         $input = $request->all();
-
-        // $image = $request->file('image');
-        // $filename = uniqid() . '.' . $image->getClientOriginalExtension();
-        // $storedPath = $image->move('public/imageUser/', $filename);
-
         $user->update($input);
-        $check = $this->create1($input);
         return view('customer.showUser', compact('user'));
-    }
-    public function create1(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'phone' => $data['phone'],
-            'role' => $data['role'],
-            // 'image' => $data['image']->getClientOriginalExtension(),
-        ]);
     }
 }

@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <p>SDT</p>
-                        <input type="text" placeholder="" id="phone" value="{{ $user->phone }}"
+                        <input type="number" placeholder="" id="phone" value="{{ $user->phone }}"
                             class="form-control" name="phone" required autofocus>
                         @if ($errors->has('phone'))
                             <span class="text-danger">{{ $errors->first('phone') }}</span>

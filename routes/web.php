@@ -56,14 +56,13 @@ Route::get('/cus_login',[UserController::class,'loginUser'])->name('loginUser');
 Route::post('/loginAuth',[UserController::class,'userLogin'])->name('userLogin');
 Route::get('/cus_register',[UserController::class,'register'])->name('register');
 Route::post('store',[UserController::class,'store'])->name('store');
-Route::get('/editUser{user}',[UserController::class,'viewEdit'])->name('viewEdit');
+Route::get('/editUser/{id}',[UserController::class,'viewEdit'])->name('viewEdit');
 Route::get('/users',[UserController::class,'viewall']);
 Route::delete('/{user}',[UserController::class,'destroy1'])->name('destroy1');
 Route::get('show/{user}',[UserController::class,'show'])->name('show');
 Route::post('/change-password', [UserController::class, 'updatePassword'])->name('update-password');
 Route::get('outUser',[UserController::class,'signout'])->name('signout');
 Route::get('/search',[UserController::class,'search'])->name('search');
-
-Route::get('/fix_user{user}',[UserController::class,'fix'])->name('fix');
+Route::get('/fix_user/{user}',[UserController::class,'fix'])->name('fix');
 Route::put('/fix_user/{user}',[UserController::class,'update'])->name('update');
 

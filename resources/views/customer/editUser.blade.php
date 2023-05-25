@@ -5,7 +5,7 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">{{ __('Đổi Mật khẩu') }}</div>
-            <form action="{{ route('update-password') }}" method="POST">
+            <form action="{{ route('update-password',['id' => $user->id]) }}" method="POST">
                 @csrf
                 <div class="card-body">
                     @if (session('status'))
