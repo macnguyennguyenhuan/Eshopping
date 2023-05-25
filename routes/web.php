@@ -3,9 +3,22 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\OrderController;
+=======
+<<<<<<< HEAD
+>>>>>>> cc3d581f25796dee14e0217d3c9faef590ec4200
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
+>>>>>>> origin/main
+>>>>>>> cc3d581f25796dee14e0217d3c9faef590ec4200
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +40,10 @@ Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'da
 Route::resource('admin/product',ProductController::class);
 
 
+Route::get('detail/{id}',[ProductController::class,'show'])->name('detail.id');
+Route::get('order/{id}',[OrderController::class,'index'])->name('order.id');
+Route::get('order/store/{id}',[OrderController::class,'store']);
+Route::post('detail/store',[CommentController::class,'store']);
 //Manufacturer
 Route::resource('/admin/manufacturer', ManufacturerController::class);
 
@@ -43,6 +60,23 @@ Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_aut
 Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+//Cart
+
+Route::post('/update-cart-quantity','CartController@update_cart_quantity');
+Route::post('/update-cart','CartController@update_cart');
+Route::post('/save-cart','CartController@save_cart');
+Route::post('/add-cart-ajax','CartController@add_cart_ajax');
+Route::get('/show-cart','CartController@show_cart');
+Route::get('/gio-hang','CartController@gio_hang');
+Route::get('/delete-to-cart/{rowId}','CartController@delete_to_cart');
+Route::get('/del-product/{session_id}','CartController@delete_product');
+Route::get('/del-all-product','CartController@delete_all_product');
+=======
+<<<<<<< HEAD
+>>>>>>> cc3d581f25796dee14e0217d3c9faef590ec4200
 //Banner
 Route::get('/manage-slider',[\App\Http\Controllers\SliderController::class,'manage_slider']);
 Route::get('/add-slider',[\App\Http\Controllers\SliderController::class,'add_slider']);
@@ -66,3 +100,8 @@ Route::get('/search',[UserController::class,'search'])->name('search');
 Route::get('/fix_user/{user}',[UserController::class,'fix'])->name('fix');
 Route::put('/fix_user/{user}',[UserController::class,'update'])->name('update');
 
+<<<<<<< HEAD
+=======
+>>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841
+>>>>>>> origin/main
+>>>>>>> cc3d581f25796dee14e0217d3c9faef590ec4200
