@@ -469,6 +469,7 @@ ul.sub-menu {
 
 .footer-widget {
   margin-bottom: 68px;
+    margin-top:50px
 }
 
 .footer-widget .container {
@@ -787,11 +788,11 @@ h2.title:before{
 .shipping {
   background-color: #F2F2F2;
   margin-top: 40px;
+  height: 300px;
   overflow: hidden;
   padding-top: 20px;
   position: relative;
 }
-
 
 .price-range{
   margin-top:30px;
@@ -866,8 +867,13 @@ h2.title {
 .productinfo h2{
 	color: #FE980F;
 	font-family: 'Roboto', sans-serif;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 700;
+}
+.productinfo h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
 }
 .product-overlay h2{
 	color: #fff;
