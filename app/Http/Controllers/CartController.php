@@ -198,6 +198,6 @@ class CartController extends Controller
     }
     public function index($id)
     {
-        return view('checkoutproducts')
+        return view('checkoutproducts');
     }
 }

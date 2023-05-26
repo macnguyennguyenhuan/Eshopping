@@ -43,79 +43,7 @@
         </div>
     </div><!--/header_top-->
         <!--/header_top-->
-
-<<<<<<< HEAD
-    <div class="header-middle"><!--header-middle-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="logo pull-left">
-                        <a href="{{URL::to('/trang-chu')}}"><img src="{{asset('frontend/images/home/logo.png')}}" alt="" /></a>
-                    </div>
-                    <div class="btn-group pull-right">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                VN
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Chinese</a></li>
-                                <li><a href="#">USA</a></li>
-                            </ul>
-=======
-        <div class="header-middle">
-            <!--header-middle-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="logo pull-left">
-                            <a href="{{URL::to('/trang-chu')}}"><span style="color: #1a202c; font-size: 3rem">E-SHOPPING</span></a>
-                            </a>
->>>>>>> origin/main
-                        </div>
-                        <div class="btn-group pull-right">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa"
-                                    data-toggle="dropdown">
-                                    VN
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Chinese</a></li>
-                                    <li><a href="#">USA</a></li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa"
-                                    data-toggle="dropdown">
-                                    VND
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Bad People</a></li>
-                                    <li><a href="#">USD</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-<<<<<<< HEAD
-                </div>
-                <div class="col-sm-8">
-                    <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-user"></i>Tài Khoản</a></li>
-                            <li><a href="checkout.html"><i class="fa fa-crosshairs"></i>Thanh Toán</a></li>
-                            <li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Giỏ Hàng</a></li>
-                            <li><a href="/login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!--/header-middle-->
-=======
->>>>>>> origin/main
-
+          <!--/header-middle-->
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
@@ -233,7 +161,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+
     </div>
 </section><!--/slider-->
 
@@ -256,7 +184,7 @@
                             
                         </div>
                         
-=======
+
     </section><!--/slider-->
     <section>
         <div class="container">
@@ -317,7 +245,7 @@
                                     <h4 class="panel-title"><a href="#">Hàng Cũ</a></h4>
                                 </div>
                             </div>
->>>>>>> origin/main
+
 
                         </div><!--/category-products-->
 
