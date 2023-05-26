@@ -6,6 +6,9 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
 
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\OrderController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +45,19 @@ Route::get('/register-auth',[\App\Http\Controllers\AuthController::class,'regist
 Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_auth']);
 Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
+
+//Cart
+
+Route::post('/update-cart-quantity','CartController@update_cart_quantity');
+Route::post('/update-cart','CartController@update_cart');
+Route::post('/save-cart','CartController@save_cart');
+Route::post('/add-cart-ajax','CartController@add_cart_ajax');
+Route::get('/show-cart','CartController@show_cart');
+Route::get('/gio-hang','CartController@gio_hang');
+Route::get('/delete-to-cart/{rowId}','CartController@delete_to_cart');
+Route::get('/del-product/{session_id}','CartController@delete_product');
+Route::get('/del-all-product','CartController@delete_all_product');
+
 
 //Banner
 Route::get('/manage-slider',[\App\Http\Controllers\SliderController::class,'manage_slider']);
