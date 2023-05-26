@@ -37,13 +37,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             Session::put('message',null);
         }
         ?>
-        <form action="{{URL::to('/admin')}}" method="get">
+        <form action="{{URL::to('/admin-dashboard')}}" method="post">
             {{ csrf_field() }}
-            @foreach($errors->all() as $val)
-                <ul>
-                    <li>{{$val}}</li>
-                </ul>
-            @endforeach
             <input type="text" class="ggg" name="admin_email" placeholder="Điền Email" required="">
             <input type="password" class="ggg" name="admin_password" placeholder="Điền Password">
             <span><input type="checkbox" />Ghi Nhớ</span>
@@ -52,8 +47,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <input type="submit" value="Đăng Nhập" name="login">
         </form>
         <p>Chưa có tài khoản?<a href="{{URL::to('/register-auth')}}">Tạo Tài Khoản</a></p>
-        <a href="{{URL::to('/register-auth')}}">Đăng Ký Auth</a>
-        <a href="{{URL::to('/login-auth')}}">Đăng Nhập Auth</a>
+
+
     </div>
 </div>
 <script src="{{asset('backend/js/bootstrap.js')}}"></script>

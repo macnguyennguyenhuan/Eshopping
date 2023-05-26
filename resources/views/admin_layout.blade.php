@@ -83,32 +83,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                             <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                             <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i>Đăng xuất</a></li>
-
-                    </li>
-                     <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-user"></i>
-                            <span>Quản Lý Người Dùng</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/add-user')}}">Liệt </a></li>
-                            <li><a href="{{URL::to('/all-users')}}">Quản Lý Sản Phẩm</a></li>
-                        </ul>
-                    </li> 
-                    < <li class="sub-menu">
-                        <a href="javascript:;">
-                            <i class="fa fa-glass"></i>
-                            <span>Danh Mục Sản Phẩm</span>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="{{URL::to('/manufacture')}}">Hãng Sản Xuất</a></li>
-                            <li><a href="{{URL::to('/add-product')}}">Thêm Sản Phẩm</a></li>
-                            <li><a href="{{URL::to('/all-products')}}">Quản Lý Sản Phẩm</a></li>
-
-                        <ul class="dropdown-menu extended logout">
-                            <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                            <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
                         </ul>
                     </li>
                     <!-- user login dropdown end -->
@@ -137,7 +111,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <span>Quản Lý Người Dùng</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="{{URL::to('/add-user')}}"> Thêm quyền người dùng </a></li>
+                                <li><a href="{{URL::to('/add-user')}}"> Thêm người dùng </a></li>
+                                <li><a href="{{URL::to('/all-users')}}"> Danh sách người dùng </a></li>
                             </ul>
                         </li>
 

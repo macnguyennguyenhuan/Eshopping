@@ -2,10 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
 use App\Models\Product;
-use App\Models\Comment;
 use App\Models\Manufacturer;
 use Illuminate\Support\Facades\File;
 
@@ -49,10 +46,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::find($id);
-        $comment = DB::table('comments')->where('product_id','=',$id)->get();   
-      
-        return view('cart.detail',['product'=>$product,'comments'=> $comment]);
+        //
     }
 
     /**

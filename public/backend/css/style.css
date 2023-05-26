@@ -2256,25 +2256,25 @@ ul.inbox-pagination li {
 .agile-info h3 {
     font-size: 2.5em;
     text-transform: uppercase;
-    color: #8b5c7e;
+    color: #7f8391;
     font-weight: 500;
     letter-spacing: 12px;
 }
 .agile-info h2 {
     font-size: 12em;
-    color:#8b5c7e;
+    color: #7f8391;
     line-height: 1;
     font-weight: 300;
     letter-spacing: 20px;
 }
 .agile-info {
    padding:9em 2em 16.6em;
-    background: rgba(240, 188, 180, 0.42);
+    background: #1a202c;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     text-align: center;
 }
 .agile-info p {
-    font-size: 1em;
+    font-size: 2em;
     color: #fff;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -2289,7 +2289,7 @@ ul.inbox-pagination li {
     padding: 12px 0px;
     letter-spacing: 2px;
     display: inline-block;
-    background: #f0bcb4;
+    background: #00a6b2;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;

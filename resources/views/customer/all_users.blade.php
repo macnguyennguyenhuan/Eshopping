@@ -1,15 +1,6 @@
 @extends('admin_layout')
-
 @section('admin_content')
-<<<<<<< HEAD:resources/views/admin/users/all_users.blade.php
-    <div class="table-agile-info">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Danh Sách Người Dùng
-            </div>
-            <div class="row w3-res-tb">
-                <div class="col-sm-5 m-b-xs">
-=======
+
     <div class="row">
         <div class="col-lg-12">
             <section class="panel">
@@ -46,8 +37,6 @@
                             <button type="submit" name="add_category_product" class="btn btn-info">Thêm users</button>
                         </form>
                     </div>
->>>>>>> c8ffbafe9419deff30297cf2a34d4375c2d8e841:resources/views/customer/all_users.blade.php
-
                 </div>
                 <div class="col-sm-4">
                 </div>

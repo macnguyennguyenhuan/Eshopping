@@ -57,7 +57,7 @@ class UserController extends Controller
         if (!Hash::check($request->old_password, $user->password)) {
             return back()->with("error", "Mật khẩu cũ không đúng");
         }
-        $user->password = Hash::make($request->new_password);
+        $user->password = Hash::make($request->new_password);   
         $user->save();
         return back()->with("status", "Đã đổi mật khẩu");
     }
