@@ -37,6 +37,9 @@ class ManufacturerController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:1|max:20'
+        ]);
         Manufacturer::create($request->all());
         return redirect()->route('manufacturer.index')->with('message', 'Thêm hãng sản xuất thành công!');
     }
