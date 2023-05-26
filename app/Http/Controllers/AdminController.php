@@ -61,7 +61,20 @@ class AdminController extends Controller
         }else{
             return false;
         }
-        
+    }
+
+    public function showProfile()
+    {
+        if (AdminController::check_login()){
+            $admin_id = Session::get('admin_id');
+            //$info_admin = AdminController::where('id', '=', $admin_id)->get();
+            $info_admin = DB::table('tbl_admin')->where('admin_id', '=', $admin_id)->get();
+            return view('admin.profile')->with('info_admin', $info_admin);
+            //dd($info_admin);
+        }
+        else{
+            return view('errors.no_login');
+        }
     }
 }
 

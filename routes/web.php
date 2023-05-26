@@ -5,7 +5,7 @@ use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
-
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\OrderController;
 
@@ -26,7 +26,7 @@ Route::get('/dashboard',[\App\Http\Controllers\AdminController::class,'show_dash
 Route::get('/logout',[\App\Http\Controllers\AdminController::class,'logout']);
 Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'dashboard']);
 Route::get('/all-users',[\App\Http\Controllers\AdminController::class,'allUsers']);
-
+Route::get('dashboard/profile', [AdminController::class, 'showProfile']);
 //Product
 Route::resource('admin/product',ProductController::class);
 
