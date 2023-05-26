@@ -23,6 +23,7 @@ class AdminController extends Controller
         }else{
             return Redirect::to('admin')->send();
         }
+        
     }
 
     public function show_dashboard(){
@@ -51,6 +52,16 @@ class AdminController extends Controller
         Session::put('admin_name',null);
         Session::put('admin_id',null);
         return Redirect::to('/admin');
+    }
+
+    public function check_login(){
+        $admin_id = Session::get('admin_id');
+        if(isset($admin_id)){
+            return true;
+        }else{
+            return false;
+        }
+        
     }
 }
 

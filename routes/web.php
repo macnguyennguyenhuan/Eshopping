@@ -26,6 +26,7 @@ Route::get('/dashboard',[\App\Http\Controllers\AdminController::class,'show_dash
 Route::get('/logout',[\App\Http\Controllers\AdminController::class,'logout']);
 Route::post('/admin-dashboard',[\App\Http\Controllers\AdminController::class,'dashboard']);
 Route::get('/all-users',[\App\Http\Controllers\AdminController::class,'allUsers']);
+
 //Product
 Route::resource('admin/product',ProductController::class);
 
@@ -37,7 +38,7 @@ Route::resource('/admin/manufacturer', ManufacturerController::class);
 
 Route::get('/users',[\App\Http\Controllers\UserManagement::class,'users']);
 
-Route::get('tim-kiem', [ProductController::class, 'timKiemSP']);
+Route::get('tim-kiem', [ProductController::class, 'cus_timKiemSP']);
 
 Route::get('/all-users',[UserController::class,'viewall']);
 Route::get('/add-user',[\App\Http\Controllers\AuthController::class,'add_user']);

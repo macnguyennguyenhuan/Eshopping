@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Manufacturer;
+use GuzzleHttp\Handler\Proxy;
 use Illuminate\Support\Facades\File;
 
 class ProductController extends Controller
@@ -13,8 +15,23 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $allProducts = Product::orderBy('created_at', 'desc')->get();
+        $check = (new AdminController)->check_login();
+        if ($check == true) {
+            $allProducts = "";
+            if (isset($_GET['keyword'])) {
+            $keyword = $_GET['keyword'];
+            $allProducts = Product::where('name', 'LIKE', '%' . $keyword . '%')->get();
+            }
+            else {
+            $allProducts = Product::orderBy('created_at', 'desc')->get();
+            }
         return view('admin.product.index')->with('allProducts', $allProducts);
+        }
+        else {
+            return view('errors.no_login');
+        }
+        
+        
     }
 
     /**
@@ -22,8 +39,14 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $allManu = Manufacturer::all();
-        return view('admin.product.add')->with('allManu', $allManu);
+        $check = (new AdminController)->check_login();
+        if ($check == true){
+            $allManu = Manufacturer::all();
+            return view('admin.product.add')->with('allManu', $allManu);
+        }
+        else {
+            return view('errors.no_login');
+        }
     }
 
     /**
@@ -101,10 +124,12 @@ class ProductController extends Controller
         return redirect('admin/product')->with('message', 'Xóa sản phẩm thành công!');
     }
 
-    public function timKiemSP()
+    public function cus_timKiemSP()
     {
         $keyword = $_GET['keyword'];
         $data = Product::where('name', 'LIKE', '%' . $keyword . '%')->get();
         return view('pages.timKiem')->with('data', $data);
     }
+
+    
 }

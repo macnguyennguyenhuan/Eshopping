@@ -61,14 +61,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <!--search & user info start-->
                 <ul class="nav pull-right top-menu">
                     <li>
-                        <input type="text" class="form-control search" placeholder=" Search">
+                        <form action="{{ url('admin/product') }}" method="get">
+                            <div class="d-flex">
+                                <input type="text" class="form-control" name="keyword" placeholder="Search"
+                                    style="border: 1px solid #000">
+                            </div>
+                        </form>
                     </li>
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <img alt="" src="{{asset('backend/images/2.png')}}">
                             <span class="username">
-                	<?php
+                                <?php
                     $name = Session::get('admin_name');
                     if($name){
                         echo $name;
@@ -76,7 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     }
                     ?>
 
-                </span>
+                            </span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -144,7 +149,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
 
                         <li>
-                            <a href="{{URL::to('/login')}}">
+                            <a href="{{URL::to('/logout')}}">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 <span>Đăng Xuất</span>
                             </a>

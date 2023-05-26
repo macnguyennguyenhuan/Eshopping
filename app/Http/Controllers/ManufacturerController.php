@@ -13,15 +13,14 @@ class ManufacturerController extends Controller
      */
     public function index()
     {
-        // $manufacturer = Manufacturer::paginate(5);
-        // return view('index', compact('manufacturer'))->with('i',(request()->input('page',1)-1)*5);
-        //return view('admin.manufacturer.index');
-        // $allManu = Manufacturer::all();
-        // return view('admin.manufacturer.index')->with('allManu', $allManu);
-
-        $allManu = Manufacturer::orderBy('created_at', 'desc')->get();
-        return view('admin.manufacturer.index')->with('allManu', $allManu);
-       
+        $check = (new AdminController)->check_login();
+        if ($check == true){
+            $allManu = Manufacturer::orderBy('created_at', 'desc')->get();
+            return view('admin.manufacturer.index')->with('allManu', $allManu);
+        }
+        else {
+            return view('errors.no_login');
+        }        
     }
 
     /**
@@ -29,7 +28,13 @@ class ManufacturerController extends Controller
      */
     public function create()
     {
-        return view('admin.manufacturer.add');
+        $check = (new AdminController)->check_login();
+        if ($check == true){
+            return view('admin.manufacturer.add');
+        }
+        else {
+            return view('errors.no_login');
+        }
     }
 
     /**
