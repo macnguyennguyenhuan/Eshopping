@@ -69,11 +69,11 @@
                                     <td>
                                         <div class="d-flex">
                                             <a href="{{ url('admin/product/' . $item->id . '/edit') }}"
-                                                class="btn btn-warning me-2">Edit</a>
+                                                class="btn btn-warning me-2">Sửa</a>
                                             <form action="{{ url('/admin/product/' . $item->id) }}" method="post">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                <button type="submit" class="btn btn-danger">Xóa</button>
                                             </form>
                                         </div>
 
