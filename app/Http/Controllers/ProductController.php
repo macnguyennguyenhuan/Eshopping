@@ -31,6 +31,14 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|min:1|max:50',
+            'price' => 'nullable',
+            'description' => 'nullable',
+            'manufacturer' => 'required',
+            'image' => 'required'
+        ]);
+
         $data = $request->all();
         
         $image_name = time().$request->file('image')->getClientOriginalName();

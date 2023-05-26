@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         <li class="sub-menu">
                             <a href="javascript:;">
-                                <i class="fa fa-sliders"></i>
+                                <i class="fa-solid fa-image"></i>
                                 <span>Banner</span>
                             </a>
                             <ul class="sub">
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         <li>
                             <a href="{{ url('admin/product') }}">
-                                <i class="fa fa-glass"></i>
+                                <i class="fa-solid fa-mobile-screen-button"></i>
                                 <span>Sản Phẩm</span>
                             </a>
 
@@ -138,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         <li>
                             <a href="{{ url('admin/manufacturer') }}">
-                                <i class="fa fa-user"></i>
+                                <i class="fa-solid fa-list"></i>
                                 <span>Hãng Sản Xuất</span>
                             </a>
                         </li>

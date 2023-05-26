@@ -58,7 +58,14 @@
                                     </td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->manufacturer }}</td>
-                                    <td>{{ $item->price }} VND</td>
+                                    <td>
+                                        @if ($item->price == null )
+                                            Chưa có
+                                        @else
+                                            {{ $item->price }} VND
+                                        @endif
+                                        
+                                    </td>
                                     <td>
                                         <div class="d-flex">
                                             <a href="{{ url('admin/product/' . $item->id . '/edit') }}"
