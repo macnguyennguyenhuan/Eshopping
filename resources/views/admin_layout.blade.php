@@ -144,7 +144,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
 
                         <li>
-                            <a href="{{URL::to('/login')}}">
+                            <a href="{{URL::to('/logout')}}">
                                 <i class="fa fa-user"></i>
                                 <span>Đăng Xuất</span>
                             </a>
