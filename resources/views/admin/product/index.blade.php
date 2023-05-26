@@ -28,11 +28,11 @@
                 @endif
                 <div class="card">
                     <div class="card-header px-0 py-3">
-                        <div class="col-sm-10">
-                            <h2>Tất Cả Sản Phẩm</h2>
+                        <div class="col-sm-9">
+                            <h2>TẤT CẢ SẢN PHẨM</h2>
                         </div>
-                        <div class="col-sm-2">
-                            <a href="{{ route('product.create') }}" class="btn btn-success mt-1">Thêm Sản Phẩm</a>
+                        <div class="col-sm-3">
+                            <a href="{{ route('product.create') }}" class="btn btn-success d-block ms-auto w-50">Thêm</a>
                         </div>
                     </div>
 

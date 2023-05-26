@@ -29,12 +29,10 @@
                 <div class="card">
                     <div class="card-header px-0 py-3">
                         <div class="col-sm-9">
-                            <h2>Hãng Sản Xuất</h2>
+                            <h2>TẤT CẢ HÃNG SẢN XUẤT</h2>
                         </div>
                         <div class="col-sm-3">
-                            <a href="{{ route('manufacturer.create') }}" style="margin-left: 4em"
-                                class="btn btn-success">Thêm Hãng Sản Xuất</a>
-
+                            <a href="{{ route('manufacturer.create') }}" class="btn btn-success d-block ms-auto w-50">Thêm</a>
                         </div>
                     </div>
 
