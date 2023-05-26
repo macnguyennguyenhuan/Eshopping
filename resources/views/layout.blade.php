@@ -79,6 +79,7 @@
                         </div>
                     </div>
 
+          <!--/header-middle-->
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
