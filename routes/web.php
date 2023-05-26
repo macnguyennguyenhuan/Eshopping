@@ -10,9 +10,6 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\OrderController;
 
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\user\UserController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,7 +58,7 @@ Route::get('/delete-to-cart/{rowId}','CartController@delete_to_cart');
 Route::get('/del-product/{session_id}','CartController@delete_product');
 Route::get('/del-all-product','CartController@delete_all_product');
 
->>>>>>> 65df2e6c85f957fc9374bcf310495b62ed4f9cba
+
 //Banner
 Route::get('/manage-slider',[\App\Http\Controllers\SliderController::class,'manage_slider']);
 Route::get('/add-slider',[\App\Http\Controllers\SliderController::class,'add_slider']);
