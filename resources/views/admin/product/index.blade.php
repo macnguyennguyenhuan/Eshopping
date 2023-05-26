@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin | Product</title>
     <style>
-        th, td, tr{
+        th,
+        td,
+        tr {
             color: #000 !important;
         }
     </style>
@@ -20,9 +22,9 @@
             {{-- Header of content --}}
             <div class="content-header">
                 @if (Session::has('message'))
-                    <div class="alert alert-success" role="alert">
-                        {{ Session::get('message') }}
-                    </div>
+                <div class="alert alert-success" role="alert">
+                    {{ Session::get('message') }}
+                </div>
                 @endif
                 <div class="card">
                     <div class="card-header px-0 py-3">
@@ -51,7 +53,8 @@
                                 <tr>
                                     <td class="my-auto">{{ $item->id }}</td>
                                     <td>
-                                        <img src="{{ asset($item->image) }}" alt="Product" class="img-flui w-5" style="width: 5em">
+                                        <img src="{{ asset($item->image) }}" alt="Product" class="img-flui w-5"
+                                            style="width: 5em">
                                     </td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->manufacturer }}</td>

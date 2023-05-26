@@ -1,4 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin | Manufacturer</title>
+    <style>
+        th,
+        td,
+        tr {
+            color: #000 !important;
+        }
+    </style>
+</head>
 
 <body>
     @include('admin_layout')
@@ -18,7 +33,7 @@
                         </div>
                         <div class="col-sm-3">
                             <a href="{{ route('manufacturer.create') }}" style="margin-left: 4em"
-                               class="btn btn-success">Thêm Hãng Sản Xuất</a>
+                                class="btn btn-success">Thêm Hãng Sản Xuất</a>
 
                         </div>
                     </div>
@@ -43,7 +58,8 @@
                                         <div class="d-flex text-center">
                                             <a href="{{ url('admin/manufacturer/' . $manu->id . '/edit') }}"
                                                 class="btn btn-warning">Sửa</a>
-                                            <form action="{{ url('admin/manufacturer/' . $manu->id) }}" method="post" class="ms-2">
+                                            <form action="{{ url('admin/manufacturer/' . $manu->id) }}" method="post"
+                                                class="ms-2">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger">Xóa</button>
