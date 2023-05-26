@@ -17,7 +17,9 @@
                             <h2>Hãng Sản Xuất</h2>
                         </div>
                         <div class="col-sm-3">
-                            <a href="{{ route('manufacturer.create') }}" style="margin-left: 4em" class="btn btn-success">Thêm Hãng Sản Xuất</a>
+                            <a href="{{ route('manufacturer.create') }}" style="margin-left: 4em"
+                               class="btn btn-success">Thêm Hãng Sản Xuất</a>
+
                         </div>
                     </div>
 
@@ -47,7 +49,7 @@
                                                 <button type="submit" class="btn btn-danger">Xóa</button>
                                             </form>
                                         </div>
-                        
+
                                     </td>
                                 </tr>
                                 @endforeach
