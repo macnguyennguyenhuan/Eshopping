@@ -3,6 +3,8 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\user\UserController;
 
@@ -43,6 +45,17 @@ Route::get('/login-auth',[\App\Http\Controllers\AuthController::class,'login_aut
 Route::post('/register',[\App\Http\Controllers\AuthController::class,'register']);
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login']);
 
+//Cart
+
+Route::post('/update-cart-quantity','CartController@update_cart_quantity');
+Route::post('/update-cart','CartController@update_cart');
+Route::post('/save-cart','CartController@save_cart');
+Route::post('/add-cart-ajax','CartController@add_cart_ajax');
+Route::get('/show-cart','CartController@show_cart');
+Route::get('/gio-hang','CartController@gio_hang');
+Route::get('/delete-to-cart/{rowId}','CartController@delete_to_cart');
+Route::get('/del-product/{session_id}','CartController@delete_product');
+Route::get('/del-all-product','CartController@delete_all_product');
 //Banner
 Route::get('/manage-slider',[\App\Http\Controllers\SliderController::class,'manage_slider']);
 Route::get('/add-slider',[\App\Http\Controllers\SliderController::class,'add_slider']);
@@ -56,6 +69,7 @@ Route::get('/cus_login',[UserController::class,'loginUser'])->name('loginUser');
 Route::post('/loginAuth',[UserController::class,'userLogin'])->name('userLogin');
 Route::get('/cus_register',[UserController::class,'register'])->name('register');
 Route::post('store',[UserController::class,'store'])->name('store');
+Route::get('/editUser/{id}',[UserController::class,'viewEdit'])->name('viewEdit');
 Route::get('/users',[UserController::class,'viewall']);
 Route::get('/editUser{user}',[UserController::class,'viewEdit'])->name('viewEdit');
 Route::delete('/{user}',[UserController::class,'destroy1'])->name('destroy1');
@@ -64,5 +78,8 @@ Route::post('/change-password', [UserController::class, 'updatePassword'])->name
 Route::get('outUser',[UserController::class,'signout'])->name('signout');
 Route::get('/search',[UserController::class,'search'])->name('search');
 Route::get('/fix_user{user}',[UserController::class,'fix'])->name('fix');
+Route::put('/fix_user/{user}',[UserController::class,'update'])->name('update');
+
+Route::get('/fix_user/{user}',[UserController::class,'fix'])->name('fix');
 Route::put('/fix_user/{user}',[UserController::class,'update'])->name('update');
 
